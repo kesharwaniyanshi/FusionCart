@@ -1,0 +1,801 @@
+Product ID,Product Name,Brand,Price,Quantity,Floor,Section,Category
+P1001,Rice,Daawat,3018.0,18,1,1,Groceries
+P1002,Rice,India Gate,3186.3,42,1,1,Groceries
+P1003,Rice,Kohinoor,3543.11,41,1,1,Groceries
+P1004,Rice,Lal Qilla,78.9,74,1,1,Groceries
+P1005,Rice,Fortune,3936.7,48,1,1,Groceries
+P1006,Pasta,Disano,2729.42,60,1,1,Groceries
+P1007,Pasta,Bambino,1010.78,9,1,1,Groceries
+P1008,Pasta,Weikfield,4106.4,55,1,1,Groceries
+P1009,Pasta,Barilla,638.93,16,1,1,Groceries
+P1010,Pasta,Del Monte,2822.49,64,1,1,Groceries
+P1011,Sugar,Madhur,1695.33,76,1,1,Groceries
+P1012,Sugar,Parry,278.21,25,1,1,Groceries
+P1013,Sugar,Dhampur,3550.19,50,1,1,Groceries
+P1014,Sugar,Tata,2116.8,56,1,1,Groceries
+P1015,Sugar,24 Mantra Organic,1395.88,54,1,1,Groceries
+P1016,Flour,Aashirvaad,4812.14,78,1,1,Groceries
+P1017,Flour,Pillsbury,1962.93,7,1,1,Groceries
+P1018,Flour,Shakti Bhog,2462.33,58,1,1,Groceries
+P1019,Flour,Fortune,1004.08,66,1,1,Groceries
+P1020,Flour,Nature Fresh,4442.98,52,1,1,Groceries
+P1021,Milk,Amul,2135.64,37,1,1,Groceries
+P1022,Milk,Mother Dairy,1614.27,32,1,1,Groceries
+P1023,Milk,Nandini,2356.12,76,1,1,Groceries
+P1024,Milk,Nestle,208.23,8,1,1,Groceries
+P1025,Milk,Britannia,3617.52,59,1,1,Groceries
+P1026,Eggs,Suguna,4955.63,52,1,1,Groceries
+P1027,Eggs,Zorabian,2090.07,32,1,1,Groceries
+P1028,Eggs,Venky's,2134.21,26,1,1,Groceries
+P1029,Eggs,Godrej,1208.59,99,1,1,Groceries
+P1030,Eggs,Eggspert,3514.98,52,1,1,Groceries
+P1031,Bread,Britannia,3773.81,95,1,1,Groceries
+P1032,Bread,Harvest Gold,3530.98,35,1,1,Groceries
+P1033,Bread,Modern,4885.39,100,1,1,Groceries
+P1034,Bread,Fresho,2414.75,18,1,1,Groceries
+P1035,Bread,English Oven,1811.94,68,1,1,Groceries
+P1036,Oil,Fortune,91.81,14,1,1,Groceries
+P1037,Oil,Saffola,4188.83,29,1,1,Groceries
+P1038,Oil,Dalda,3177.74,59,1,1,Groceries
+P1039,Oil,Sundrop,3250.15,46,1,1,Groceries
+P1040,Oil,Gemini,2844.04,76,1,1,Groceries
+P1041,Salt,Tata,2578.3,51,1,1,Groceries
+P1042,Salt,Aashirvaad,1110.84,37,1,1,Groceries
+P1043,Salt,Catch,1571.38,49,1,1,Groceries
+P1044,Salt,Nirma,963.51,18,1,1,Groceries
+P1045,Salt,Annapurna,4014.51,45,1,1,Groceries
+P1046,Tea,Tata Tea,184.01,66,1,1,Groceries
+P1047,Tea,Brooke Bond,1721.26,34,1,1,Groceries
+P1048,Tea,Lipton,769.46,31,1,1,Groceries
+P1049,Tea,Wagh Bakri,3948.25,87,1,1,Groceries
+P1050,Tea,Society,1483.46,29,1,1,Groceries
+P1051,Mobile,Samsung,1852.53,41,1,2,Electronics
+P1052,Mobile,Apple,2827.87,43,1,2,Electronics
+P1053,Mobile,Xiaomi,2435.2,28,1,2,Electronics
+P1054,Mobile,OnePlus,1158.91,73,1,2,Electronics
+P1055,Mobile,Realme,2957.56,54,1,2,Electronics
+P1056,Laptop,HP,97.71,63,1,2,Electronics
+P1057,Laptop,Dell,531.4,70,1,2,Electronics
+P1058,Laptop,Lenovo,457.79,11,1,2,Electronics
+P1059,Laptop,Asus,711.37,52,1,2,Electronics
+P1060,Laptop,Acer,2554.9,56,1,2,Electronics
+P1061,Smart Watch,Apple,640.44,86,1,2,Electronics
+P1062,Smart Watch,Samsung,2680.13,81,1,2,Electronics
+P1063,Smart Watch,Fitbit,2933.77,67,1,2,Electronics
+P1064,Smart Watch,Garmin,721.79,94,1,2,Electronics
+P1065,Smart Watch,Noise,1505.96,49,1,2,Electronics
+P1066,Headphones,Boat,3626.23,27,1,2,Electronics
+P1067,Headphones,Sony,3058.87,68,1,2,Electronics
+P1068,Headphones,JBL,2122.56,55,1,2,Electronics
+P1069,Headphones,Sennheiser,4951.86,45,1,2,Electronics
+P1070,Headphones,Bose,4936.69,58,1,2,Electronics
+P1071,Television,LG,1515.97,52,1,2,Electronics
+P1072,Television,Sony,4642.28,56,1,2,Electronics
+P1073,Television,Samsung,4087.37,67,1,2,Electronics
+P1074,Television,Mi,3673.9,67,1,2,Electronics
+P1075,Television,TCL,4236.07,78,1,2,Electronics
+P1076,Camera,Canon,261.62,15,1,2,Electronics
+P1077,Camera,Nikon,1713.56,85,1,2,Electronics
+P1078,Camera,Sony,2840.36,36,1,2,Electronics
+P1079,Camera,Fujifilm,2424.35,86,1,2,Electronics
+P1080,Camera,Panasonic,2752.24,6,1,2,Electronics
+P1081,Tablet,Apple,1523.19,58,1,2,Electronics
+P1082,Tablet,Samsung,4966.99,20,1,2,Electronics
+P1083,Tablet,Lenovo,784.23,67,1,2,Electronics
+P1084,Tablet,Microsoft,3902.16,53,1,2,Electronics
+P1085,Tablet,Huawei,1551.95,8,1,2,Electronics
+P1086,Speaker,JBL,3219.83,78,1,2,Electronics
+P1087,Speaker,Sony,446.96,96,1,2,Electronics
+P1088,Speaker,Boat,2569.64,31,1,2,Electronics
+P1089,Speaker,Bose,3775.01,77,1,2,Electronics
+P1090,Speaker,Philips,3121.27,28,1,2,Electronics
+P1091,Router,TP-Link,4390.53,83,1,2,Electronics
+P1092,Router,Netgear,1745.03,82,1,2,Electronics
+P1093,Router,D-Link,4214.25,49,1,2,Electronics
+P1094,Router,Asus,3391.72,78,1,2,Electronics
+P1095,Router,Tenda,4309.74,94,1,2,Electronics
+P1096,Charger,Boat,4777.9,68,1,2,Electronics
+P1097,Charger,Mi,910.03,53,1,2,Electronics
+P1098,Charger,Samsung,444.46,1,1,2,Electronics
+P1099,Charger,Ambrane,4222.63,99,1,2,Electronics
+P1100,Charger,Anker,1833.91,69,1,2,Electronics
+P1101,T-shirt,Nike,87.44,77,1,3,Clothing
+P1102,T-shirt,Adidas,2328.83,78,1,3,Clothing
+P1103,T-shirt,Puma,2900.02,72,1,3,Clothing
+P1104,T-shirt,Levi's,2886.45,58,1,3,Clothing
+P1105,T-shirt,HRX,3055.73,14,1,3,Clothing
+P1106,Jeans,Levi's,4826.22,40,1,3,Clothing
+P1107,Jeans,Wrangler,3960.99,87,1,3,Clothing
+P1108,Jeans,Pepe,4806.21,74,1,3,Clothing
+P1109,Jeans,Spykar,2299.52,10,1,3,Clothing
+P1110,Jeans,Lee,2775.99,73,1,3,Clothing
+P1111,Jacket,Woodland,3135.04,38,1,3,Clothing
+P1112,Jacket,Wildcraft,3780.6,35,1,3,Clothing
+P1113,Jacket,Nike,1219.83,33,1,3,Clothing
+P1114,Jacket,Zara,2770.05,44,1,3,Clothing
+P1115,Jacket,Puma,3351.46,74,1,3,Clothing
+P1116,Dress,Zara,2888.58,30,1,3,Clothing
+P1117,Dress,H&M,677.23,9,1,3,Clothing
+P1118,Dress,Forever 21,4038.58,54,1,3,Clothing
+P1119,Dress,Global Desi,2860.56,22,1,3,Clothing
+P1120,Dress,FabIndia,1132.31,68,1,3,Clothing
+P1121,Shoes,Nike,3813.83,90,1,3,Clothing
+P1122,Shoes,Adidas,480.82,31,1,3,Clothing
+P1123,Shoes,Puma,2926.59,45,1,3,Clothing
+P1124,Shoes,Reebok,985.34,32,1,3,Clothing
+P1125,Shoes,Bata,2918.76,9,1,3,Clothing
+P1126,Socks,Adidas,4167.47,81,1,3,Clothing
+P1127,Socks,Nike,2517.54,59,1,3,Clothing
+P1128,Socks,Puma,2778.82,24,1,3,Clothing
+P1129,Socks,Jockey,1295.95,64,1,3,Clothing
+P1130,Socks,Bata,4807.71,22,1,3,Clothing
+P1131,Hat,Nike,3938.23,59,1,3,Clothing
+P1132,Hat,Adidas,4389.24,30,1,3,Clothing
+P1133,Hat,Puma,1715.82,13,1,3,Clothing
+P1134,Hat,Reebok,1435.52,85,1,3,Clothing
+P1135,Hat,New Era,2203.55,13,1,3,Clothing
+P1136,Gloves,Nike,942.56,38,1,3,Clothing
+P1137,Gloves,Puma,1565.88,17,1,3,Clothing
+P1138,Gloves,Adidas,3445.31,90,1,3,Clothing
+P1139,Gloves,Decathlon,4200.17,66,1,3,Clothing
+P1140,Gloves,Wildcraft,2000.6,64,1,3,Clothing
+P1141,Scarf,H&M,2634.68,51,1,3,Clothing
+P1142,Scarf,Zara,3523.09,47,1,3,Clothing
+P1143,Scarf,FabIndia,4011.67,30,1,3,Clothing
+P1144,Scarf,Uniqlo,3869.62,10,1,3,Clothing
+P1145,Scarf,Allen Solly,3601.19,31,1,3,Clothing
+P1146,Shorts,Nike,361.74,13,1,3,Clothing
+P1147,Shorts,Adidas,854.41,39,1,3,Clothing
+P1148,Shorts,Puma,2843.1,22,1,3,Clothing
+P1149,Shorts,Reebok,2687.0,46,1,3,Clothing
+P1150,Shorts,Jockey,2174.59,27,1,3,Clothing
+P1151,Table,Ikea,3571.56,99,1,4,Furniture
+P1152,Table,Godrej Interio,316.27,45,1,4,Furniture
+P1153,Table,HomeTown,1124.17,90,1,4,Furniture
+P1154,Table,Urban Ladder,260.15,85,1,4,Furniture
+P1155,Table,Durian,3297.53,1,1,4,Furniture
+P1156,Chair,Ikea,3076.72,88,1,4,Furniture
+P1157,Chair,Godrej Interio,2581.1,50,1,4,Furniture
+P1158,Chair,Featherlite,4505.79,25,1,4,Furniture
+P1159,Chair,Nilkamal,2908.62,79,1,4,Furniture
+P1160,Chair,Urban Ladder,2670.73,70,1,4,Furniture
+P1161,Sofa,Urban Ladder,1436.59,5,1,4,Furniture
+P1162,Sofa,HomeTown,1325.04,68,1,4,Furniture
+P1163,Sofa,Pepperfry,3387.45,89,1,4,Furniture
+P1164,Sofa,Godrej Interio,548.3,6,1,4,Furniture
+P1165,Sofa,Durian,1045.25,72,1,4,Furniture
+P1166,Bed,Wakefit,154.6,51,1,4,Furniture
+P1167,Bed,Durian,2825.74,62,1,4,Furniture
+P1168,Bed,Pepperfry,4595.81,1,1,4,Furniture
+P1169,Bed,Urban Ladder,2752.02,76,1,4,Furniture
+P1170,Bed,Godrej Interio,4513.53,55,1,4,Furniture
+P1171,Bookshelf,Ikea,4986.63,9,1,4,Furniture
+P1172,Bookshelf,Pepperfry,591.0,42,1,4,Furniture
+P1173,Bookshelf,Urban Ladder,2405.18,47,1,4,Furniture
+P1174,Bookshelf,HomeTown,2572.13,71,1,4,Furniture
+P1175,Bookshelf,Nilkamal,2507.22,93,1,4,Furniture
+P1176,Wardrobe,Godrej Interio,1587.59,57,1,4,Furniture
+P1177,Wardrobe,Ikea,1209.42,64,1,4,Furniture
+P1178,Wardrobe,Urban Ladder,4904.05,62,1,4,Furniture
+P1179,Wardrobe,Pepperfry,4048.41,45,1,4,Furniture
+P1180,Wardrobe,Durian,2400.21,92,1,4,Furniture
+P1181,Desk,Ikea,4137.77,50,1,4,Furniture
+P1182,Desk,Godrej Interio,4955.01,40,1,4,Furniture
+P1183,Desk,Urban Ladder,546.66,37,1,4,Furniture
+P1184,Desk,Featherlite,407.34,50,1,4,Furniture
+P1185,Desk,Nilkamal,2553.95,10,1,4,Furniture
+P1186,Dining Table,Godrej Interio,1288.15,14,1,4,Furniture
+P1187,Dining Table,Pepperfry,2689.85,1,1,4,Furniture
+P1188,Dining Table,Ikea,449.01,61,1,4,Furniture
+P1189,Dining Table,Urban Ladder,84.82,33,1,4,Furniture
+P1190,Dining Table,Durian,838.71,32,1,4,Furniture
+P1191,Coffee Table,Ikea,2894.23,58,1,4,Furniture
+P1192,Coffee Table,Pepperfry,779.59,91,1,4,Furniture
+P1193,Coffee Table,Urban Ladder,1514.82,35,1,4,Furniture
+P1194,Coffee Table,Godrej Interio,4883.04,83,1,4,Furniture
+P1195,Coffee Table,Durian,3372.66,68,1,4,Furniture
+P1196,TV Stand,Ikea,4179.63,100,1,4,Furniture
+P1197,TV Stand,Urban Ladder,594.04,14,1,4,Furniture
+P1198,TV Stand,Pepperfry,4475.11,32,1,4,Furniture
+P1199,TV Stand,HomeTown,760.24,9,1,4,Furniture
+P1200,TV Stand,Nilkamal,964.53,60,1,4,Furniture
+P1201,Lego Set,LEGO,4487.29,11,2,1,Toys
+P1202,Lego Set,Hasbro,4939.81,8,2,1,Toys
+P1203,Lego Set,Fisher-Price,4880.25,14,2,1,Toys
+P1204,Lego Set,Mattel,4788.54,91,2,1,Toys
+P1205,Lego Set,Funskool,1786.85,57,2,1,Toys
+P1206,Action Figure,Marvel,660.73,70,2,1,Toys
+P1207,Action Figure,DC,791.09,60,2,1,Toys
+P1208,Action Figure,Hasbro,3256.87,3,2,1,Toys
+P1209,Action Figure,Funko,191.25,1,2,1,Toys
+P1210,Action Figure,Mattel,1767.75,3,2,1,Toys
+P1211,Puzzle,Ravensburger,1577.01,82,2,1,Toys
+P1212,Puzzle,Melissa & Doug,1275.47,11,2,1,Toys
+P1213,Puzzle,Funskool,3046.45,25,2,1,Toys
+P1214,Puzzle,Hasbro,226.01,36,2,1,Toys
+P1215,Puzzle,Toykraft,673.4,83,2,1,Toys
+P1216,Doll,Barbie,4369.88,70,2,1,Toys
+P1217,Doll,Disney,3242.65,95,2,1,Toys
+P1218,Doll,Mattel,3799.44,17,2,1,Toys
+P1219,Doll,Funskool,2449.42,87,2,1,Toys
+P1220,Doll,Hasbro,255.05,30,2,1,Toys
+P1221,Toy Car,Hot Wheels,1994.23,74,2,1,Toys
+P1222,Toy Car,Majorette,4013.56,22,2,1,Toys
+P1223,Toy Car,Maisto,1084.0,72,2,1,Toys
+P1224,Toy Car,Funskool,3761.85,65,2,1,Toys
+P1225,Toy Car,Toykraft,341.18,85,2,1,Toys
+P1226,Board Game,Monopoly,339.64,23,2,1,Toys
+P1227,Board Game,Scrabble,4124.73,13,2,1,Toys
+P1228,Board Game,Hasbro,1206.98,43,2,1,Toys
+P1229,Board Game,Funskool,2219.4,6,2,1,Toys
+P1230,Board Game,Mattel,4334.13,22,2,1,Toys
+P1231,Stuffed Animal,Ty,3626.99,73,2,1,Toys
+P1232,Stuffed Animal,Funskool,2207.67,33,2,1,Toys
+P1233,Stuffed Animal,Disney,3769.23,72,2,1,Toys
+P1234,Stuffed Animal,Mattel,3066.44,62,2,1,Toys
+P1235,Stuffed Animal,Hasbro,1948.32,40,2,1,Toys
+P1236,Building Blocks,LEGO,1171.95,98,2,1,Toys
+P1237,Building Blocks,Mega Bloks,2176.88,63,2,1,Toys
+P1238,Building Blocks,Funskool,2403.02,39,2,1,Toys
+P1239,Building Blocks,Melissa & Doug,3871.17,5,2,1,Toys
+P1240,Building Blocks,Toykraft,662.94,19,2,1,Toys
+P1241,RC Car,Hot Wheels,1215.06,14,2,1,Toys
+P1242,RC Car,Maisto,3863.29,27,2,1,Toys
+P1243,RC Car,Funskool,4633.78,44,2,1,Toys
+P1244,RC Car,Majorette,185.74,20,2,1,Toys
+P1245,RC Car,Toykraft,2650.96,45,2,1,Toys
+P1246,Yo-yo,Duncan,3110.13,98,2,1,Toys
+P1247,Yo-yo,MagicYoYo,2495.98,4,2,1,Toys
+P1248,Yo-yo,YoYoFactory,547.3,18,2,1,Toys
+P1249,Yo-yo,Funskool,2587.83,33,2,1,Toys
+P1250,Yo-yo,Toykraft,2220.93,15,2,1,Toys
+P1251,Notebooks,Classmate,4695.31,62,2,2,Stationery
+P1252,Notebooks,Navneet,2011.76,55,2,2,Stationery
+P1253,Notebooks,Cello,1257.18,98,2,2,Stationery
+P1254,Notebooks,ITC,4746.91,45,2,2,Stationery
+P1255,Notebooks,Camlin,4102.32,65,2,2,Stationery
+P1256,Pens,Reynolds,4129.72,53,2,2,Stationery
+P1257,Pens,Cello,4793.99,79,2,2,Stationery
+P1258,Pens,Pilot,4778.55,31,2,2,Stationery
+P1259,Pens,Luxor,3243.79,35,2,2,Stationery
+P1260,Pens,Parker,4007.35,3,2,2,Stationery
+P1261,Pencils,Apsara,1344.14,16,2,2,Stationery
+P1262,Pencils,Natraj,2413.28,5,2,2,Stationery
+P1263,Pencils,Staedtler,652.11,20,2,2,Stationery
+P1264,Pencils,Faber-Castell,763.47,50,2,2,Stationery
+P1265,Pencils,Camel,4860.56,3,2,2,Stationery
+P1266,Markers,Camlin,2573.54,68,2,2,Stationery
+P1267,Markers,Luxor,2500.17,68,2,2,Stationery
+P1268,Markers,Faber-Castell,4928.4,23,2,2,Stationery
+P1269,Markers,Staedtler,801.22,29,2,2,Stationery
+P1270,Markers,Cello,2045.82,72,2,2,Stationery
+P1271,Glue,Fevicol,3087.74,14,2,2,Stationery
+P1272,Glue,Camel,4838.19,82,2,2,Stationery
+P1273,Glue,UHU,1232.67,1,2,2,Stationery
+P1274,Glue,Elmer's,2287.67,92,2,2,Stationery
+P1275,Glue,Pidilite,932.57,95,2,2,Stationery
+P1276,Highlighters,Luxor,4473.39,2,2,2,Stationery
+P1277,Highlighters,Faber-Castell,1965.53,87,2,2,Stationery
+P1278,Highlighters,Staedtler,4530.14,83,2,2,Stationery
+P1279,Highlighters,Camlin,1772.14,82,2,2,Stationery
+P1280,Highlighters,Stabilo,1533.78,23,2,2,Stationery
+P1281,Scissors,Fiskars,4458.76,66,2,2,Stationery
+P1282,Scissors,Scotch,1390.52,77,2,2,Stationery
+P1283,Scissors,Westcott,3821.32,1,2,2,Stationery
+P1284,Scissors,Camlin,3539.02,96,2,2,Stationery
+P1285,Scissors,Staedtler,1611.94,6,2,2,Stationery
+P1286,Staplers,Kangaro,266.06,21,2,2,Stationery
+P1287,Staplers,Max,1868.21,28,2,2,Stationery
+P1288,Staplers,Swingline,2317.27,39,2,2,Stationery
+P1289,Staplers,Bostitch,3419.79,56,2,2,Stationery
+P1290,Staplers,Faber-Castell,480.62,75,2,2,Stationery
+P1291,Tape,Scotch,2579.61,36,2,2,Stationery
+P1292,Tape,3M,2231.33,15,2,2,Stationery
+P1293,Tape,Cello,4720.72,34,2,2,Stationery
+P1294,Tape,Pidilite,3345.99,64,2,2,Stationery
+P1295,Tape,Aeron,3644.64,7,2,2,Stationery
+P1296,Binders,Classmate,2444.4,59,2,2,Stationery
+P1297,Binders,Navneet,2320.71,48,2,2,Stationery
+P1298,Binders,ITC,2738.38,21,2,2,Stationery
+P1299,Binders,Apsara,2948.92,85,2,2,Stationery
+P1300,Binders,Camlin,2098.2,90,2,2,Stationery
+P1301,Cricket Bat,SS,2306.02,18,2,3,Sports Equipment
+P1302,Cricket Bat,SG,612.48,91,2,3,Sports Equipment
+P1303,Cricket Bat,MRF,1013.89,50,2,3,Sports Equipment
+P1304,Cricket Bat,Kookaburra,4654.82,1,2,3,Sports Equipment
+P1305,Cricket Bat,GM,2275.86,68,2,3,Sports Equipment
+P1306,Football,Nivia,3051.87,80,2,3,Sports Equipment
+P1307,Football,Cosco,313.05,58,2,3,Sports Equipment
+P1308,Football,Adidas,666.78,91,2,3,Sports Equipment
+P1309,Football,Nike,2826.49,41,2,3,Sports Equipment
+P1310,Football,Puma,1064.28,5,2,3,Sports Equipment
+P1311,Badminton Racket,Yonex,2702.11,21,2,3,Sports Equipment
+P1312,Badminton Racket,Li-Ning,2821.84,71,2,3,Sports Equipment
+P1313,Badminton Racket,Victor,3588.16,7,2,3,Sports Equipment
+P1314,Badminton Racket,Carlton,859.57,8,2,3,Sports Equipment
+P1315,Badminton Racket,Cosco,1104.19,13,2,3,Sports Equipment
+P1316,Tennis Racket,Wilson,2514.19,67,2,3,Sports Equipment
+P1317,Tennis Racket,Head,4325.64,56,2,3,Sports Equipment
+P1318,Tennis Racket,Babolat,2862.14,27,2,3,Sports Equipment
+P1319,Tennis Racket,Yonex,2322.7,5,2,3,Sports Equipment
+P1320,Tennis Racket,Prince,1183.55,80,2,3,Sports Equipment
+P1321,Basketball,Nivia,1283.42,10,2,3,Sports Equipment
+P1322,Basketball,Spalding,4385.5,66,2,3,Sports Equipment
+P1323,Basketball,Cosco,1376.01,24,2,3,Sports Equipment
+P1324,Basketball,Wilson,2271.27,48,2,3,Sports Equipment
+P1325,Basketball,Nike,4609.94,42,2,3,Sports Equipment
+P1326,Skateboard,Oxelo,3685.27,95,2,3,Sports Equipment
+P1327,Skateboard,Jaspo,4635.37,83,2,3,Sports Equipment
+P1328,Skateboard,Strauss,313.66,90,2,3,Sports Equipment
+P1329,Skateboard,Nivia,620.09,88,2,3,Sports Equipment
+P1330,Skateboard,Kryptonics,502.6,80,2,3,Sports Equipment
+P1331,Hockey Stick,SG,4965.01,20,2,3,Sports Equipment
+P1332,Hockey Stick,TK,3234.37,60,2,3,Sports Equipment
+P1333,Hockey Stick,Gryphon,1875.23,7,2,3,Sports Equipment
+P1334,Hockey Stick,Adidas,637.88,3,2,3,Sports Equipment
+P1335,Hockey Stick,Cosco,3027.71,76,2,3,Sports Equipment
+P1336,Table Tennis Bat,Stag,1307.6,71,2,3,Sports Equipment
+P1337,Table Tennis Bat,GKI,2847.69,9,2,3,Sports Equipment
+P1338,Table Tennis Bat,Butterfly,4773.28,72,2,3,Sports Equipment
+P1339,Table Tennis Bat,Nittaku,4061.75,89,2,3,Sports Equipment
+P1340,Table Tennis Bat,Joola,3460.0,50,2,3,Sports Equipment
+P1341,Volleyball,Nivia,4478.0,25,2,3,Sports Equipment
+P1342,Volleyball,Cosco,1668.34,98,2,3,Sports Equipment
+P1343,Volleyball,Spartan,1899.38,11,2,3,Sports Equipment
+P1344,Volleyball,Vector X,3172.21,9,2,3,Sports Equipment
+P1345,Volleyball,Puma,196.77,76,2,3,Sports Equipment
+P1346,Golf Clubs,Callaway,2433.07,87,2,3,Sports Equipment
+P1347,Golf Clubs,TaylorMade,301.03,25,2,3,Sports Equipment
+P1348,Golf Clubs,Wilson,3610.17,94,2,3,Sports Equipment
+P1349,Golf Clubs,Titleist,788.58,4,2,3,Sports Equipment
+P1350,Golf Clubs,Cobra,4199.14,68,2,3,Sports Equipment
+P1351,Dish Soap,Vim,3301.87,61,2,4,Household Essentials
+P1352,Dish Soap,Pril,2499.18,30,2,4,Household Essentials
+P1353,Dish Soap,Exo,2284.56,85,2,4,Household Essentials
+P1354,Dish Soap,Nimyle,2010.05,20,2,4,Household Essentials
+P1355,Dish Soap,Godrej,4847.27,100,2,4,Household Essentials
+P1356,Detergent,Surf Excel,3055.43,98,2,4,Household Essentials
+P1357,Detergent,Ariel,1083.93,9,2,4,Household Essentials
+P1358,Detergent,Tide,3008.95,27,2,4,Household Essentials
+P1359,Detergent,Rin,3737.04,27,2,4,Household Essentials
+P1360,Detergent,Nirma,4636.45,80,2,4,Household Essentials
+P1361,Sponges,Scotch-Brite,3563.78,87,2,4,Household Essentials
+P1362,Sponges,Spotzero,394.29,11,2,4,Household Essentials
+P1363,Sponges,Mr. Clean,73.13,47,2,4,Household Essentials
+P1364,Sponges,Wipex,3672.9,59,2,4,Household Essentials
+P1365,Sponges,3M,804.03,58,2,4,Household Essentials
+P1366,Trash Bags,Gala,1963.27,39,2,4,Household Essentials
+P1367,Trash Bags,Wonder Fresh,4846.92,39,2,4,Household Essentials
+P1368,Trash Bags,Cleanworld,3284.41,96,2,4,Household Essentials
+P1369,Trash Bags,Scotch-Brite,222.24,8,2,4,Household Essentials
+P1370,Trash Bags,Spotzero,3428.75,69,2,4,Household Essentials
+P1371,Mop,Spotzero,2300.32,42,2,4,Household Essentials
+P1372,Mop,Gala,833.14,3,2,4,Household Essentials
+P1373,Mop,Scotch-Brite,3107.61,80,2,4,Household Essentials
+P1374,Mop,Wipeout,995.6,44,2,4,Household Essentials
+P1375,Mop,Prestige,3406.13,56,2,4,Household Essentials
+P1376,Broom,Gala,2416.46,66,2,4,Household Essentials
+P1377,Broom,Spotzero,4524.7,70,2,4,Household Essentials
+P1378,Broom,Scotch-Brite,2715.81,52,2,4,Household Essentials
+P1379,Broom,Gubb,4159.22,63,2,4,Household Essentials
+P1380,Broom,Prestige,3858.85,93,2,4,Household Essentials
+P1381,Glass Cleaner,Colin,495.3,82,2,4,Household Essentials
+P1382,Glass Cleaner,Pigeon,1075.83,57,2,4,Household Essentials
+P1383,Glass Cleaner,Clin,2583.13,89,2,4,Household Essentials
+P1384,Glass Cleaner,Scotch-Brite,4785.34,72,2,4,Household Essentials
+P1385,Glass Cleaner,3M,2260.14,8,2,4,Household Essentials
+P1386,Toilet Cleaner,Harpic,3855.78,90,2,4,Household Essentials
+P1387,Toilet Cleaner,Domex,2672.67,35,2,4,Household Essentials
+P1388,Toilet Cleaner,Lysol,3898.79,85,2,4,Household Essentials
+P1389,Toilet Cleaner,Sanifresh,4482.66,77,2,4,Household Essentials
+P1390,Toilet Cleaner,Clorox,54.03,37,2,4,Household Essentials
+P1391,Air Freshener,Odonil,1444.49,2,2,4,Household Essentials
+P1392,Air Freshener,Ambi Pur,4857.64,5,2,4,Household Essentials
+P1393,Air Freshener,Airwick,2348.26,74,2,4,Household Essentials
+P1394,Air Freshener,Godrej,317.91,46,2,4,Household Essentials
+P1395,Air Freshener,Renuzit,1265.01,81,2,4,Household Essentials
+P1396,Hand Wash,Dettol,3431.95,88,2,4,Household Essentials
+P1397,Hand Wash,Lifebuoy,696.12,76,2,4,Household Essentials
+P1398,Hand Wash,Godrej Protekt,690.49,13,2,4,Household Essentials
+P1399,Hand Wash,Savlon,4326.48,6,2,4,Household Essentials
+P1400,Hand Wash,Himalaya,2429.59,83,2,4,Household Essentials
+P1401,Shampoo,Sunsilk,3768.28,72,3,1,Beauty & Personal Care
+P1402,Shampoo,Dove,1758.25,8,3,1,Beauty & Personal Care
+P1403,Shampoo,Pantene,2494.2,33,3,1,Beauty & Personal Care
+P1404,Shampoo,Tresemme,573.13,62,3,1,Beauty & Personal Care
+P1405,Shampoo,Clinic Plus,603.66,8,3,1,Beauty & Personal Care
+P1406,Conditioner,Dove,2103.97,97,3,1,Beauty & Personal Care
+P1407,Conditioner,Tresemme,4822.36,27,3,1,Beauty & Personal Care
+P1408,Conditioner,Pantene,3987.3,99,3,1,Beauty & Personal Care
+P1409,Conditioner,L'Oreal,4731.21,24,3,1,Beauty & Personal Care
+P1410,Conditioner,Herbal Essences,2029.81,51,3,1,Beauty & Personal Care
+P1411,Face Wash,Himalaya,4948.54,57,3,1,Beauty & Personal Care
+P1412,Face Wash,Clean & Clear,1749.18,69,3,1,Beauty & Personal Care
+P1413,Face Wash,Neutrogena,1737.88,81,3,1,Beauty & Personal Care
+P1414,Face Wash,Biotique,900.35,91,3,1,Beauty & Personal Care
+P1415,Face Wash,Pond's,1449.87,70,3,1,Beauty & Personal Care
+P1416,Moisturizer,Nivea,2989.89,42,3,1,Beauty & Personal Care
+P1417,Moisturizer,Lakme,3394.81,94,3,1,Beauty & Personal Care
+P1418,Moisturizer,Himalaya,1711.35,29,3,1,Beauty & Personal Care
+P1419,Moisturizer,Cetaphil,1031.31,98,3,1,Beauty & Personal Care
+P1420,Moisturizer,Biotique,2220.85,25,3,1,Beauty & Personal Care
+P1421,Body Lotion,Vaseline,4324.43,74,3,1,Beauty & Personal Care
+P1422,Body Lotion,Nivea,3327.79,67,3,1,Beauty & Personal Care
+P1423,Body Lotion,Parachute,2188.34,87,3,1,Beauty & Personal Care
+P1424,Body Lotion,Himalaya,2908.97,81,3,1,Beauty & Personal Care
+P1425,Body Lotion,Jergens,4643.02,99,3,1,Beauty & Personal Care
+P1426,Deodorant,Nivea,719.55,55,3,1,Beauty & Personal Care
+P1427,Deodorant,Axe,1994.66,1,3,1,Beauty & Personal Care
+P1428,Deodorant,Park Avenue,1670.91,42,3,1,Beauty & Personal Care
+P1429,Deodorant,Wild Stone,1271.0,92,3,1,Beauty & Personal Care
+P1430,Deodorant,Fogg,4086.51,76,3,1,Beauty & Personal Care
+P1431,Perfume,Fogg,4098.16,78,3,1,Beauty & Personal Care
+P1432,Perfume,Engage,4656.84,4,3,1,Beauty & Personal Care
+P1433,Perfume,Denver,1047.28,74,3,1,Beauty & Personal Care
+P1434,Perfume,Wild Stone,2587.36,43,3,1,Beauty & Personal Care
+P1435,Perfume,Park Avenue,4925.05,33,3,1,Beauty & Personal Care
+P1436,Sunscreen,Lotus,4085.4,58,3,1,Beauty & Personal Care
+P1437,Sunscreen,Lakme,1973.09,12,3,1,Beauty & Personal Care
+P1438,Sunscreen,Biotique,2695.92,14,3,1,Beauty & Personal Care
+P1439,Sunscreen,Neutrogena,3133.68,46,3,1,Beauty & Personal Care
+P1440,Sunscreen,VLCC,4244.75,84,3,1,Beauty & Personal Care
+P1441,Lip Balm,Nivea,903.02,32,3,1,Beauty & Personal Care
+P1442,Lip Balm,Vaseline,3535.64,97,3,1,Beauty & Personal Care
+P1443,Lip Balm,Maybelline,1955.16,28,3,1,Beauty & Personal Care
+P1444,Lip Balm,Lakme,3791.55,95,3,1,Beauty & Personal Care
+P1445,Lip Balm,Biotique,4749.39,43,3,1,Beauty & Personal Care
+P1446,Hair Oil,Parachute,2016.51,88,3,1,Beauty & Personal Care
+P1447,Hair Oil,Bajaj Almond Drops,932.53,72,3,1,Beauty & Personal Care
+P1448,Hair Oil,Dabur Amla,4864.65,12,3,1,Beauty & Personal Care
+P1449,Hair Oil,Indulekha,1198.68,43,3,1,Beauty & Personal Care
+P1450,Hair Oil,Himalaya,2350.13,79,3,1,Beauty & Personal Care
+P1451,Microwave,LG,2531.5,68,3,2,Kitchen Appliances
+P1452,Microwave,Samsung,4030.71,99,3,2,Kitchen Appliances
+P1453,Microwave,IFB,82.85,49,3,2,Kitchen Appliances
+P1454,Microwave,Whirlpool,118.35,30,3,2,Kitchen Appliances
+P1455,Microwave,Panasonic,3589.73,51,3,2,Kitchen Appliances
+P1456,Refrigerator,LG,4854.64,45,3,2,Kitchen Appliances
+P1457,Refrigerator,Samsung,439.1,54,3,2,Kitchen Appliances
+P1458,Refrigerator,Whirlpool,1272.11,1,3,2,Kitchen Appliances
+P1459,Refrigerator,Godrej,1267.1,56,3,2,Kitchen Appliances
+P1460,Refrigerator,Haier,2231.88,23,3,2,Kitchen Appliances
+P1461,Mixer Grinder,Bajaj,373.63,96,3,2,Kitchen Appliances
+P1462,Mixer Grinder,Philips,2854.99,49,3,2,Kitchen Appliances
+P1463,Mixer Grinder,Prestige,4013.36,13,3,2,Kitchen Appliances
+P1464,Mixer Grinder,Butterfly,4402.81,48,3,2,Kitchen Appliances
+P1465,Mixer Grinder,Sujata,3808.26,8,3,2,Kitchen Appliances
+P1466,Air Fryer,Philips,2291.5,13,3,2,Kitchen Appliances
+P1467,Air Fryer,Prestige,2260.79,94,3,2,Kitchen Appliances
+P1468,Air Fryer,Havells,1789.21,27,3,2,Kitchen Appliances
+P1469,Air Fryer,Kenstar,4383.33,4,3,2,Kitchen Appliances
+P1470,Air Fryer,Inalsa,1202.51,4,3,2,Kitchen Appliances
+P1471,Toaster,Philips,947.94,90,3,2,Kitchen Appliances
+P1472,Toaster,Morphy Richards,2361.94,93,3,2,Kitchen Appliances
+P1473,Toaster,Prestige,3148.05,55,3,2,Kitchen Appliances
+P1474,Toaster,Bajaj,3819.59,71,3,2,Kitchen Appliances
+P1475,Toaster,Inalsa,3032.5,47,3,2,Kitchen Appliances
+P1476,Water Purifier,Kent,195.68,54,3,2,Kitchen Appliances
+P1477,Water Purifier,Aquaguard,3055.71,12,3,2,Kitchen Appliances
+P1478,Water Purifier,Pureit,1449.28,76,3,2,Kitchen Appliances
+P1479,Water Purifier,Livpure,1899.58,40,3,2,Kitchen Appliances
+P1480,Water Purifier,Tata Swach,3082.14,34,3,2,Kitchen Appliances
+P1481,Induction Cooktop,Philips,1175.74,99,3,2,Kitchen Appliances
+P1482,Induction Cooktop,Prestige,1157.12,4,3,2,Kitchen Appliances
+P1483,Induction Cooktop,Bajaj,304.87,50,3,2,Kitchen Appliances
+P1484,Induction Cooktop,Pigeon,2815.68,18,3,2,Kitchen Appliances
+P1485,Induction Cooktop,Usha,1231.43,54,3,2,Kitchen Appliances
+P1486,Electric Kettle,Philips,2825.21,18,3,2,Kitchen Appliances
+P1487,Electric Kettle,Prestige,2417.54,7,3,2,Kitchen Appliances
+P1488,Electric Kettle,Bajaj,3222.81,17,3,2,Kitchen Appliances
+P1489,Electric Kettle,Inalsa,2163.88,74,3,2,Kitchen Appliances
+P1490,Electric Kettle,Morphy Richards,1178.48,95,3,2,Kitchen Appliances
+P1491,Gas Stove,Prestige,4047.51,55,3,2,Kitchen Appliances
+P1492,Gas Stove,Butterfly,2263.68,17,3,2,Kitchen Appliances
+P1493,Gas Stove,Sunflame,1737.26,74,3,2,Kitchen Appliances
+P1494,Gas Stove,Glen,1449.54,44,3,2,Kitchen Appliances
+P1495,Gas Stove,Pigeon,3030.91,22,3,2,Kitchen Appliances
+P1496,Dishwasher,Bosch,480.35,78,3,2,Kitchen Appliances
+P1497,Dishwasher,IFB,4379.16,66,3,2,Kitchen Appliances
+P1498,Dishwasher,LG,762.44,85,3,2,Kitchen Appliances
+P1499,Dishwasher,Siemens,1369.99,59,3,2,Kitchen Appliances
+P1500,Dishwasher,Whirlpool,4393.7,62,3,2,Kitchen Appliances
+P1501,Fiction,Penguin,4560.01,43,3,3,Books
+P1502,Fiction,HarperCollins,3365.81,35,3,3,Books
+P1503,Fiction,Hachette,2594.08,97,3,3,Books
+P1504,Fiction,Rupa,3714.14,20,3,3,Books
+P1505,Fiction,Bloomsbury,123.62,3,3,3,Books
+P1506,Non-fiction,Penguin,336.33,13,3,3,Books
+P1507,Non-fiction,HarperCollins,261.82,50,3,3,Books
+P1508,Non-fiction,Hachette,1073.06,69,3,3,Books
+P1509,Non-fiction,Simon & Schuster,3088.2,46,3,3,Books
+P1510,Non-fiction,Bloomsbury,4254.93,64,3,3,Books
+P1511,Self-help,Jaico,4677.25,83,3,3,Books
+P1512,Self-help,Penguin,1345.18,38,3,3,Books
+P1513,Self-help,HarperCollins,4080.1,9,3,3,Books
+P1514,Self-help,Hachette,2000.84,54,3,3,Books
+P1515,Self-help,Rupa,2053.33,42,3,3,Books
+P1516,Academic,Pearson,3255.41,64,3,3,Books
+P1517,Academic,McGraw Hill,2108.89,95,3,3,Books
+P1518,Academic,S. Chand,4503.87,10,3,3,Books
+P1519,Academic,Laxmi,4919.51,43,3,3,Books
+P1520,Academic,Oxford,2475.8,2,3,3,Books
+P1521,Comics,Tinkle,1134.28,52,3,3,Books
+P1522,Comics,Amar Chitra Katha,4136.98,59,3,3,Books
+P1523,Comics,Marvel,4313.12,54,3,3,Books
+P1524,Comics,DC,4538.23,4,3,3,Books
+P1525,Comics,Archie,680.29,8,3,3,Books
+P1526,Children's Books,Scholastic,2408.05,99,3,3,Books
+P1527,Children's Books,Usborne,1911.91,28,3,3,Books
+P1528,Children's Books,Penguin,3496.57,28,3,3,Books
+P1529,Children's Books,HarperCollins,3762.57,65,3,3,Books
+P1530,Children's Books,Rupa,2485.83,36,3,3,Books
+P1531,Cookbooks,Penguin,3185.42,17,3,3,Books
+P1532,Cookbooks,HarperCollins,3645.31,10,3,3,Books
+P1533,Cookbooks,Hachette,1639.08,84,3,3,Books
+P1534,Cookbooks,Bloomsbury,2317.13,36,3,3,Books
+P1535,Cookbooks,Jaico,1481.94,43,3,3,Books
+P1536,Travel Books,Lonely Planet,4182.48,10,3,3,Books
+P1537,Travel Books,National Geographic,602.25,53,3,3,Books
+P1538,Travel Books,Rough Guides,4233.65,96,3,3,Books
+P1539,Travel Books,DK,167.22,14,3,3,Books
+P1540,Travel Books,Penguin,1042.49,46,3,3,Books
+P1541,Biographies,Penguin,609.04,49,3,3,Books
+P1542,Biographies,HarperCollins,2263.99,82,3,3,Books
+P1543,Biographies,Hachette,3093.77,52,3,3,Books
+P1544,Biographies,Simon & Schuster,3402.3,34,3,3,Books
+P1545,Biographies,Bloomsbury,988.98,72,3,3,Books
+P1546,Poetry,Rupa,3099.5,7,3,3,Books
+P1547,Poetry,Penguin,2499.79,25,3,3,Books
+P1548,Poetry,HarperCollins,3047.85,84,3,3,Books
+P1549,Poetry,Hachette,3438.85,42,3,3,Books
+P1550,Poetry,Jaico,1564.92,74,3,3,Books
+P1551,Car Covers,AutoFurnish,1980.15,45,3,4,Automotive Accessories
+P1552,Car Covers,Elegant,1346.19,23,3,4,Automotive Accessories
+P1553,Car Covers,Polco,1781.98,40,3,4,Automotive Accessories
+P1554,Car Covers,Coverwell,2848.11,67,3,4,Automotive Accessories
+P1555,Car Covers,Autotrends,1399.02,94,3,4,Automotive Accessories
+P1556,Seat Covers,AutoFurnish,4084.04,52,3,4,Automotive Accessories
+P1557,Seat Covers,Elegant,3563.7,59,3,4,Automotive Accessories
+P1558,Seat Covers,Autotrends,4223.84,81,3,4,Automotive Accessories
+P1559,Seat Covers,Polco,4481.13,12,3,4,Automotive Accessories
+P1560,Seat Covers,Kurtzy,4102.37,85,3,4,Automotive Accessories
+P1561,Car Perfume,Godrej,3141.3,29,3,4,Automotive Accessories
+P1562,Car Perfume,Ambi Pur,2467.17,70,3,4,Automotive Accessories
+P1563,Car Perfume,Involve,2267.09,51,3,4,Automotive Accessories
+P1564,Car Perfume,Areon,4434.57,44,3,4,Automotive Accessories
+P1565,Car Perfume,My Shaldan,2244.66,50,3,4,Automotive Accessories
+P1566,Car Vacuum Cleaner,Black & Decker,3638.94,50,3,4,Automotive Accessories
+P1567,Car Vacuum Cleaner,Eureka Forbes,1188.03,23,3,4,Automotive Accessories
+P1568,Car Vacuum Cleaner,ResQTech,3091.92,49,3,4,Automotive Accessories
+P1569,Car Vacuum Cleaner,Bergmann,4908.0,94,3,4,Automotive Accessories
+P1570,Car Vacuum Cleaner,TUSA,2822.18,19,3,4,Automotive Accessories
+P1571,Car Mats,AutoFurnish,4124.72,93,3,4,Automotive Accessories
+P1572,Car Mats,Elegant,2579.54,10,3,4,Automotive Accessories
+P1573,Car Mats,Autotrends,1877.64,44,3,4,Automotive Accessories
+P1574,Car Mats,Polco,3644.9,35,3,4,Automotive Accessories
+P1575,Car Mats,Michelin,2825.99,1,3,4,Automotive Accessories
+P1576,Helmet,Vega,1081.87,48,3,4,Automotive Accessories
+P1577,Helmet,Studds,4136.74,43,3,4,Automotive Accessories
+P1578,Helmet,Steelbird,1151.1,89,3,4,Automotive Accessories
+P1579,Helmet,LS2,3919.98,96,3,4,Automotive Accessories
+P1580,Helmet,Royal Enfield,2235.56,68,3,4,Automotive Accessories
+P1581,Bike Cover,AutoFurnish,4495.84,79,3,4,Automotive Accessories
+P1582,Bike Cover,Polco,2688.41,7,3,4,Automotive Accessories
+P1583,Bike Cover,Autotrends,3574.6,15,3,4,Automotive Accessories
+P1584,Bike Cover,Coverwell,4786.05,29,3,4,Automotive Accessories
+P1585,Bike Cover,Mototrance,3346.1,85,3,4,Automotive Accessories
+P1586,GPS Navigator,MapmyIndia,4742.66,51,3,4,Automotive Accessories
+P1587,GPS Navigator,TomTom,614.0,80,3,4,Automotive Accessories
+P1588,GPS Navigator,Garmin,2626.16,37,3,4,Automotive Accessories
+P1589,GPS Navigator,Acumen,4911.14,42,3,4,Automotive Accessories
+P1590,GPS Navigator,Vxplore,2236.2,85,3,4,Automotive Accessories
+P1591,Car Charger,Mi,2223.9,44,3,4,Automotive Accessories
+P1592,Car Charger,Boat,1128.79,28,3,4,Automotive Accessories
+P1593,Car Charger,Portronics,3366.63,94,3,4,Automotive Accessories
+P1594,Car Charger,Ambrane,643.02,91,3,4,Automotive Accessories
+P1595,Car Charger,Samsung,2119.52,87,3,4,Automotive Accessories
+P1596,Car Mobile Holder,Spigen,232.14,44,3,4,Automotive Accessories
+P1597,Car Mobile Holder,Portronics,2342.0,70,3,4,Automotive Accessories
+P1598,Car Mobile Holder,Mi,1257.02,15,3,4,Automotive Accessories
+P1599,Car Mobile Holder,Ambrane,1839.04,35,3,4,Automotive Accessories
+P1600,Car Mobile Holder,Ugreen,3652.52,56,3,4,Automotive Accessories
+P1601,Dog Food,Pedigree,1822.62,98,4,1,Pet Supplies
+P1602,Dog Food,Royal Canin,3991.44,58,4,1,Pet Supplies
+P1603,Dog Food,Drools,1082.2,31,4,1,Pet Supplies
+P1604,Dog Food,Farmina,2216.55,45,4,1,Pet Supplies
+P1605,Dog Food,Purepet,2951.28,100,4,1,Pet Supplies
+P1606,Cat Food,Whiskas,2499.83,13,4,1,Pet Supplies
+P1607,Cat Food,Royal Canin,4027.47,36,4,1,Pet Supplies
+P1608,Cat Food,Drools,4501.4,60,4,1,Pet Supplies
+P1609,Cat Food,Me-O,2438.95,40,4,1,Pet Supplies
+P1610,Cat Food,Purina,1588.63,97,4,1,Pet Supplies
+P1611,Dog Collar,Trixie,615.0,10,4,1,Pet Supplies
+P1612,Dog Collar,Petmate,3975.83,96,4,1,Pet Supplies
+P1613,Dog Collar,Pets Empire,1887.35,84,4,1,Pet Supplies
+P1614,Dog Collar,DogSpot,4466.15,83,4,1,Pet Supplies
+P1615,Dog Collar,Pedigree,4400.04,11,4,1,Pet Supplies
+P1616,Cat Litter,Trixie,4128.6,69,4,1,Pet Supplies
+P1617,Cat Litter,Catsan,1520.73,22,4,1,Pet Supplies
+P1618,Cat Litter,PetCrux,1294.77,82,4,1,Pet Supplies
+P1619,Cat Litter,Drools,4861.38,22,4,1,Pet Supplies
+P1620,Cat Litter,Me-O,747.57,82,4,1,Pet Supplies
+P1621,Pet Shampoo,Himalaya,388.95,48,4,1,Pet Supplies
+P1622,Pet Shampoo,Captain Zack,3036.29,90,4,1,Pet Supplies
+P1623,Pet Shampoo,Wahl,4893.8,92,4,1,Pet Supplies
+P1624,Pet Shampoo,Pets Empire,3597.28,99,4,1,Pet Supplies
+P1625,Pet Shampoo,Trixie,2684.3,40,4,1,Pet Supplies
+P1626,Pet Bed,Pets Empire,4145.09,21,4,1,Pet Supplies
+P1627,Pet Bed,Pawzone,2998.46,78,4,1,Pet Supplies
+P1628,Pet Bed,Barkbutler,2049.9,19,4,1,Pet Supplies
+P1629,Pet Bed,Heads Up For Tails,403.65,32,4,1,Pet Supplies
+P1630,Pet Bed,Pawsindia,4060.87,6,4,1,Pet Supplies
+P1631,Pet Toys,Petmate,2586.09,24,4,1,Pet Supplies
+P1632,Pet Toys,Trixie,2725.66,82,4,1,Pet Supplies
+P1633,Pet Toys,KONG,2694.65,100,4,1,Pet Supplies
+P1634,Pet Toys,DogSpot,2724.43,39,4,1,Pet Supplies
+P1635,Pet Toys,Heads Up For Tails,3507.74,39,4,1,Pet Supplies
+P1636,Fish Food,Taiyo,3977.07,76,4,1,Pet Supplies
+P1637,Fish Food,Optimum,2467.02,70,4,1,Pet Supplies
+P1638,Fish Food,Hikari,3311.95,59,4,1,Pet Supplies
+P1639,Fish Food,Sobo,3024.17,79,4,1,Pet Supplies
+P1640,Fish Food,AquaNature,780.12,35,4,1,Pet Supplies
+P1641,Bird Food,Himalaya,326.95,22,4,1,Pet Supplies
+P1642,Bird Food,Vitapol,4544.93,52,4,1,Pet Supplies
+P1643,Bird Food,Petslife,1444.84,86,4,1,Pet Supplies
+P1644,Bird Food,Drools,442.93,1,4,1,Pet Supplies
+P1645,Bird Food,Nature Forever,1532.07,95,4,1,Pet Supplies
+P1646,Pet Grooming Kit,Trixie,2500.29,36,4,1,Pet Supplies
+P1647,Pet Grooming Kit,Captain Zack,1466.39,67,4,1,Pet Supplies
+P1648,Pet Grooming Kit,Wahl,710.8,37,4,1,Pet Supplies
+P1649,Pet Grooming Kit,Furminator,4464.33,44,4,1,Pet Supplies
+P1650,Pet Grooming Kit,Himalaya,1767.45,42,4,1,Pet Supplies
+P1651,Flower Seeds,Namdhari,3788.68,5,4,2,Garden Supplies
+P1652,Flower Seeds,Pansari Seeds,59.08,48,4,2,Garden Supplies
+P1653,Flower Seeds,JK Agri Genetics,2973.47,26,4,2,Garden Supplies
+P1654,Flower Seeds,Biocarve,3536.97,56,4,2,Garden Supplies
+P1655,Flower Seeds,Agri World,2039.38,63,4,2,Garden Supplies
+P1656,Fertilizer,Iffco,1612.33,82,4,2,Garden Supplies
+P1657,Fertilizer,Godrej Agrovet,2988.54,77,4,2,Garden Supplies
+P1658,Fertilizer,Krishi Rasayan,757.44,94,4,2,Garden Supplies
+P1659,Fertilizer,Parijat,1434.14,43,4,2,Garden Supplies
+P1660,Fertilizer,Rallis India,1511.58,22,4,2,Garden Supplies
+P1661,Garden Tools,Falcon,3399.46,62,4,2,Garden Supplies
+P1662,Garden Tools,Bosch,3364.44,88,4,2,Garden Supplies
+P1663,Garden Tools,Black & Decker,4770.66,99,4,2,Garden Supplies
+P1664,Garden Tools,Kisankraft,143.2,92,4,2,Garden Supplies
+P1665,Garden Tools,Chapin,2642.68,8,4,2,Garden Supplies
+P1666,Plant Pots,TrustBasket,1344.68,96,4,2,Garden Supplies
+P1667,Plant Pots,Nurserylive,2979.9,50,4,2,Garden Supplies
+P1668,Plant Pots,Green Gardenia,3882.5,79,4,2,Garden Supplies
+P1669,Plant Pots,Home4u,3192.76,46,4,2,Garden Supplies
+P1670,Plant Pots,BioBloom,4946.42,88,4,2,Garden Supplies
+P1671,Lawn Mower,Falcon,2026.17,49,4,2,Garden Supplies
+P1672,Lawn Mower,Bosch,3114.41,79,4,2,Garden Supplies
+P1673,Lawn Mower,Black & Decker,978.97,36,4,2,Garden Supplies
+P1674,Lawn Mower,Honda,2254.37,59,4,2,Garden Supplies
+P1675,Lawn Mower,Kisankraft,3118.52,24,4,2,Garden Supplies
+P1676,Garden Hose,Kisan Kraft,1295.5,69,4,2,Garden Supplies
+P1677,Garden Hose,Bosch,2946.49,13,4,2,Garden Supplies
+P1678,Garden Hose,Neptune,127.2,76,4,2,Garden Supplies
+P1679,Garden Hose,Ugaoo,849.54,6,4,2,Garden Supplies
+P1680,Garden Hose,Cello,2535.77,34,4,2,Garden Supplies
+P1681,Pesticides,Bayer,4040.54,19,4,2,Garden Supplies
+P1682,Pesticides,Tata Chemicals,3618.38,95,4,2,Garden Supplies
+P1683,Pesticides,Godrej Agrovet,4109.62,80,4,2,Garden Supplies
+P1684,Pesticides,Coromandel,986.55,97,4,2,Garden Supplies
+P1685,Pesticides,Krishi Rasayan,2802.27,15,4,2,Garden Supplies
+P1686,Compost,TrustBasket,4654.7,12,4,2,Garden Supplies
+P1687,Compost,Nature Care,2129.68,94,4,2,Garden Supplies
+P1688,Compost,Agricare,1082.21,36,4,2,Garden Supplies
+P1689,Compost,CocoPeat,1460.16,37,4,2,Garden Supplies
+P1690,Compost,Organic Harvest,1580.77,49,4,2,Garden Supplies
+P1691,Garden Sprinkler,Kisan Kraft,1095.96,99,4,2,Garden Supplies
+P1692,Garden Sprinkler,Neptune,4690.99,76,4,2,Garden Supplies
+P1693,Garden Sprinkler,Rain Bird,4101.45,88,4,2,Garden Supplies
+P1694,Garden Sprinkler,Orbit,4906.29,73,4,2,Garden Supplies
+P1695,Garden Sprinkler,Chapin,4132.13,2,4,2,Garden Supplies
+P1696,Pruning Shears,Falcon,1974.42,58,4,2,Garden Supplies
+P1697,Pruning Shears,Gardena,1970.87,38,4,2,Garden Supplies
+P1698,Pruning Shears,Bosch,4275.4,72,4,2,Garden Supplies
+P1699,Pruning Shears,Fiskars,3731.88,100,4,2,Garden Supplies
+P1700,Pruning Shears,Kisankraft,4618.37,36,4,2,Garden Supplies
+P1701,Diapers,Pampers,1064.13,53,4,3,Baby Care
+P1702,Diapers,Huggies,2249.38,40,4,3,Baby Care
+P1703,Diapers,MamyPoko,735.01,81,4,3,Baby Care
+P1704,Diapers,Libero,1367.71,6,4,3,Baby Care
+P1705,Diapers,Babyhug,4170.01,95,4,3,Baby Care
+P1706,Baby Wipes,Pampers,2500.27,75,4,3,Baby Care
+P1707,Baby Wipes,Himalaya,1219.6,5,4,3,Baby Care
+P1708,Baby Wipes,Johnson's,184.19,3,4,3,Baby Care
+P1709,Baby Wipes,Babyhug,4429.74,82,4,3,Baby Care
+P1710,Baby Wipes,Mee Mee,4862.44,94,4,3,Baby Care
+P1711,Baby Lotion,Johnson's,4495.77,49,4,3,Baby Care
+P1712,Baby Lotion,Himalaya,1530.11,70,4,3,Baby Care
+P1713,Baby Lotion,Chicco,2349.0,37,4,3,Baby Care
+P1714,Baby Lotion,Sebamed,1582.47,4,4,3,Baby Care
+P1715,Baby Lotion,Mamaearth,4279.75,61,4,3,Baby Care
+P1716,Baby Powder,Johnson's,2518.81,45,4,3,Baby Care
+P1717,Baby Powder,Himalaya,1518.64,76,4,3,Baby Care
+P1718,Baby Powder,Chicco,173.96,69,4,3,Baby Care
+P1719,Baby Powder,Sebamed,3049.27,89,4,3,Baby Care
+P1720,Baby Powder,Mamaearth,2493.42,89,4,3,Baby Care
+P1721,Baby Soap,Johnson's,4412.67,27,4,3,Baby Care
+P1722,Baby Soap,Himalaya,3686.94,13,4,3,Baby Care
+P1723,Baby Soap,Chicco,4419.14,68,4,3,Baby Care
+P1724,Baby Soap,Sebamed,365.21,52,4,3,Baby Care
+P1725,Baby Soap,Mamaearth,863.96,5,4,3,Baby Care
+P1726,Baby Shampoo,Johnson's,2808.74,66,4,3,Baby Care
+P1727,Baby Shampoo,Himalaya,131.58,10,4,3,Baby Care
+P1728,Baby Shampoo,Chicco,277.83,71,4,3,Baby Care
+P1729,Baby Shampoo,Sebamed,1289.18,79,4,3,Baby Care
+P1730,Baby Shampoo,Mamaearth,3099.9,85,4,3,Baby Care
+P1731,Baby Carrier,LuvLap,3071.76,100,4,3,Baby Care
+P1732,Baby Carrier,R for Rabbit,538.18,90,4,3,Baby Care
+P1733,Baby Carrier,Babyhug,4770.57,8,4,3,Baby Care
+P1734,Baby Carrier,Mee Mee,1884.69,50,4,3,Baby Care
+P1735,Baby Carrier,Chicco,4485.91,82,4,3,Baby Care
+P1736,Stroller,LuvLap,2434.42,15,4,3,Baby Care
+P1737,Stroller,R for Rabbit,4843.2,22,4,3,Baby Care
+P1738,Stroller,Babyhug,4748.0,78,4,3,Baby Care
+P1739,Stroller,Mee Mee,2377.62,58,4,3,Baby Care
+P1740,Stroller,Chicco,1050.55,90,4,3,Baby Care
+P1741,Baby Bottle,Pigeon,3633.09,49,4,3,Baby Care
+P1742,Baby Bottle,Philips Avent,200.72,3,4,3,Baby Care
+P1743,Baby Bottle,Mee Mee,1092.59,8,4,3,Baby Care
+P1744,Baby Bottle,Babyhug,426.48,55,4,3,Baby Care
+P1745,Baby Bottle,Chicco,3379.45,38,4,3,Baby Care
+P1746,Crib,Babyhug,3933.93,81,4,3,Baby Care
+P1747,Crib,Mee Mee,2251.35,42,4,3,Baby Care
+P1748,Crib,LuvLap,4711.48,99,4,3,Baby Care
+P1749,Crib,R for Rabbit,1272.76,7,4,3,Baby Care
+P1750,Crib,Chicco,2129.17,95,4,3,Baby Care
+P1751,Treadmill,Fitkit,2170.3,13,4,4,Fitness Equipment
+P1752,Treadmill,Durafit,4806.52,12,4,4,Fitness Equipment
+P1753,Treadmill,Cockatoo,4091.21,96,4,4,Fitness Equipment
+P1754,Treadmill,PowerMax,871.08,63,4,4,Fitness Equipment
+P1755,Treadmill,Lifelong,3572.72,55,4,4,Fitness Equipment
+P1756,Exercise Bike,Reach,523.94,31,4,4,Fitness Equipment
+P1757,Exercise Bike,Fitkit,4396.45,38,4,4,Fitness Equipment
+P1758,Exercise Bike,Cockatoo,322.52,49,4,4,Fitness Equipment
+P1759,Exercise Bike,PowerMax,2976.19,2,4,4,Fitness Equipment
+P1760,Exercise Bike,Lifelong,4109.29,16,4,4,Fitness Equipment
+P1761,Dumbbells,Cockatoo,837.95,21,4,4,Fitness Equipment
+P1762,Dumbbells,Lifelong,1894.87,2,4,4,Fitness Equipment
+P1763,Dumbbells,Kore,1975.1,46,4,4,Fitness Equipment
+P1764,Dumbbells,Strauss,2422.13,9,4,4,Fitness Equipment
+P1765,Dumbbells,Aurion,609.58,51,4,4,Fitness Equipment
+P1766,Yoga Mat,Strauss,4706.11,14,4,4,Fitness Equipment
+P1767,Yoga Mat,Reebok,906.95,11,4,4,Fitness Equipment
+P1768,Yoga Mat,Boldfit,2764.41,64,4,4,Fitness Equipment
+P1769,Yoga Mat,AmazonBasics,4444.74,17,4,4,Fitness Equipment
+P1770,Yoga Mat,Bodyfit,1793.52,88,4,4,Fitness Equipment
+P1771,Skipping Rope,Strauss,2163.94,55,4,4,Fitness Equipment
+P1772,Skipping Rope,Boldfit,502.57,67,4,4,Fitness Equipment
+P1773,Skipping Rope,Nivia,346.62,23,4,4,Fitness Equipment
+P1774,Skipping Rope,Aurion,2603.53,37,4,4,Fitness Equipment
+P1775,Skipping Rope,Bodyfit,4401.65,98,4,4,Fitness Equipment
+P1776,Kettlebell,Strauss,3766.75,92,4,4,Fitness Equipment
+P1777,Kettlebell,Aurion,4944.27,25,4,4,Fitness Equipment
+P1778,Kettlebell,Kore,3397.57,51,4,4,Fitness Equipment
+P1779,Kettlebell,Cockatoo,3966.03,12,4,4,Fitness Equipment
+P1780,Kettlebell,Lifelong,2589.51,35,4,4,Fitness Equipment
+P1781,Resistance Bands,Strauss,3089.86,34,4,4,Fitness Equipment
+P1782,Resistance Bands,Boldfit,4324.24,73,4,4,Fitness Equipment
+P1783,Resistance Bands,Aurion,2299.03,90,4,4,Fitness Equipment
+P1784,Resistance Bands,Burnlab,4124.46,64,4,4,Fitness Equipment
+P1785,Resistance Bands,Fitlastics,3963.45,9,4,4,Fitness Equipment
+P1786,Foam Roller,Strauss,354.42,36,4,4,Fitness Equipment
+P1787,Foam Roller,Boldfit,1044.71,21,4,4,Fitness Equipment
+P1788,Foam Roller,Aurion,219.56,98,4,4,Fitness Equipment
+P1789,Foam Roller,Reebok,4570.7,33,4,4,Fitness Equipment
+P1790,Foam Roller,Fitkit,1247.23,41,4,4,Fitness Equipment
+P1791,Pull-up Bar,Fitkit,3795.94,10,4,4,Fitness Equipment
+P1792,Pull-up Bar,Strauss,3352.95,48,4,4,Fitness Equipment
+P1793,Pull-up Bar,Aurion,3262.35,16,4,4,Fitness Equipment
+P1794,Pull-up Bar,Lifelong,2215.15,69,4,4,Fitness Equipment
+P1795,Pull-up Bar,Cockatoo,1861.13,1,4,4,Fitness Equipment
+P1796,Rowing Machine,Fitkit,4249.25,3,4,4,Fitness Equipment
+P1797,Rowing Machine,Cockatoo,1283.56,73,4,4,Fitness Equipment
+P1798,Rowing Machine,PowerMax,3918.79,57,4,4,Fitness Equipment
+P1799,Rowing Machine,Kobo,2149.36,81,4,4,Fitness Equipment
+P1800,Rowing Machine,Lifelong,366.01,51,4,4,Fitness Equipment
