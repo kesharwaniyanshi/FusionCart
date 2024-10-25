@@ -2,13 +2,22 @@ import { Box, Typography, IconButton, Badge, Button } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import LoginDialog from "../login/loginDialog";
+import { useState } from "react";
+
 
 const CustomButtons = () => {
+
+    const [open, setOpen] = useState(false);
+    const openDialog = () => {
+        setOpen(true);
+    }
     return (
         <Box display="flex" alignItems="center" gap={6}>
 
             {/* Sign In Section */}
             <Button
+                onClick={() => openDialog()}
                 variant="outlined"
                 color="white"
                 sx={{
@@ -19,11 +28,12 @@ const CustomButtons = () => {
                 }}
             >
                 <AccountCircleIcon fontSize="small" />
-                <Box ml={0.5}>
+                <Box ml={0.5} >
                     <Typography fontSize="1rem" lineHeight={1.5} textTransform={"none"}>
                         Login
                     </Typography>
                 </Box>
+
             </Button>
 
             {/* Reorder Section */}
@@ -48,6 +58,7 @@ const CustomButtons = () => {
                 </IconButton>
                 <Typography fontSize="0.875rem" style={{ marginTop: "-8px" }}>Cart</Typography>
             </Box>
+            <LoginDialog open={open} setOpen={setOpen}/>
         </Box>
     );
 };
