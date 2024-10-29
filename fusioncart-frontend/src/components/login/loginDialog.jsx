@@ -1,6 +1,6 @@
 import { Box, Dialog, TextField, Button, Typography, styled } from "@mui/material";
-import { useState } from "react";
-
+import { useState, useContext } from "react";
+import { DataContext } from "../../context/DataProvider";
 import { authenticateSignup } from "../../service/api";
 
 const Component = styled(Box)`
@@ -59,8 +59,8 @@ cursor: pointer
 const accountInitialValues = {
     login: {
         view: "login",
-        heading:"Login",
-        subHeading:"Get access to your Orders, Wishlists and Recommendations"
+        heading: "Login",
+        subHeading: "Get access to your Orders, Wishlists and Recommendations"
     },
     signup: {
         view: "signup",
@@ -69,17 +69,25 @@ const accountInitialValues = {
     }
 }
 
-const signupInitialValue={
-    firstname:'',
-    lastname:"",
-    email:"",
-    password:"",
-    phoneNumber:""
+const signupInitialValue = {
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+    phoneNumber: ""
+}
+const loginInitialValue = {
+
+    email: "",
+    password: "",
+
 }
 const LoginDialog = ({ open, setOpen }) => {
 
     const [account, toggleAccount] = useState(accountInitialValues.login);
-    const [signup,setSignup]=useState(signupInitialValue);
+    const [signup, setSignup] = useState(signupInitialValue);
+    const { setAccount } = useContext(DataContext);
+    const [login, setLogin] = useState(loginInitialValue);
 
 
     const handleClose = () => {
@@ -91,16 +99,25 @@ const LoginDialog = ({ open, setOpen }) => {
         toggleAccount(accountInitialValues.signup);
     }
 
-    const onInputChange=(e)=>{
+    const onInputChange = (e) => {
         // console.log(e.target.value)   
-        setSignup({...signup,[e.target.name]:e.target.value});
+        setSignup({ ...signup, [e.target.name]: e.target.value });
     }
 
-    const signupUser=async()=>{
-        // API call to signup user
-      let response= await authenticateSignup(signup);
-        // console.log(response    )
+    const signupUser = async () => {
+        let response = await authenticateSignup(signup);
+        if (!response) return;
+        handleClose();
+        setAccount(signup.firstname);
     }
+
+    const onValueChange = (e) => {
+        setLogin({ ...login, [e.target.name]: e.target.value });
+    }
+    const loginUser = () => {
+
+    }
+
     return (
         <Dialog open={open} onClose={handleClose} PaperProps={{ sx: { maxWidth: "unset" } }}>
             <Component>
@@ -112,23 +129,22 @@ const LoginDialog = ({ open, setOpen }) => {
                     </Image>
                     {account.view === "login" ?
                         <Wrapper>
-                            <TextField variant="standard" label="Enter Email/Phone number" />
-                            <TextField variant="standard" label="Enter Password" />
+                            <TextField variant="standard" onChange={(e) => onValueChange(e)} name="email" label="Enter Email/Phone number" />
+                            <TextField variant="standard" onChange={(e) => onValueChange(e)} name="password" label="Enter Password" />
                             <Text>By continuing, you agree to FusionCarts's Terms of Use and Privacy Policy.</Text>
-                            <LoginButton >Login</LoginButton>
+                            <LoginButton onClick={() => loginUser()} >Login</LoginButton>
                             <Typography style={{ textAlign: "center" }}>OR</Typography>
                             <RequestOTP>Request OTP</RequestOTP>
                             <CreateAccount onClick={() => toggleSignUp()}>New to FusionCart? Create an account</CreateAccount>
                         </Wrapper>
                         :
                         <Wrapper>
-                            <TextField variant="standard" label="Enter First Name"  name="firstname" onChange={(e)=>onInputChange(e)} />
-                            <TextField variant="standard" label="Enter Last Name" name="lastname" onChange={(e) => onInputChange(e)} />
-                            <TextField variant="standard" label="Enter Email" name="email" onChange={(e) => onInputChange(e)} />
-                            <TextField variant="standard" label="Enter Password" name="password" onChange={(e) => onInputChange(e)} />
-                            <TextField variant="standard" label="Enter Phone Number" name="phoneNumber" onChange={(e) => onInputChange(e)} />
-
-                            <LoginButton onClick={()=>signupUser()}>Continue</LoginButton>
+                            <TextField variant="standard" onChange={(e) => onInputChange(e)} name='firstname' label='Enter Firstname' />
+                            <TextField variant="standard" onChange={(e) => onInputChange(e)} name='lastname' label='Enter Lastname' />
+                            <TextField variant="standard" onChange={(e) => onInputChange(e)} name='email' label='Enter Email' />
+                            <TextField variant="standard" onChange={(e) => onInputChange(e)} name='password' label='Enter Password' />
+                            <TextField variant="standard" onChange={(e) => onInputChange(e)} name='phone' label='Enter Phone' />
+                            <LoginButton onClick={() => signupUser()} >Continue</LoginButton>
                         </Wrapper>
                     }
                 </Box>

@@ -3,12 +3,15 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LoginDialog from "../login/loginDialog";
-import { useState } from "react";
-
+import { useState, useContext } from "react";
+import { DataContext } from "../../context/DataProvider";
+import Profile from "./Profile";
 
 const CustomButtons = () => {
 
     const [open, setOpen] = useState(false);
+    const { account,setAccount } = useContext(DataContext);
+
     const openDialog = () => {
         setOpen(true);
     }
@@ -16,25 +19,27 @@ const CustomButtons = () => {
         <Box display="flex" alignItems="center" gap={6}>
 
             {/* Sign In Section */}
-            <Button
-                onClick={() => openDialog()}
-                variant="outlined"
-                color="white"
-                sx={{
-                    '&:hover': {
-                        backgroundColor: 'rgba(255, 255, 255, 0.1)', // Change to your desired hover color
-                        color: 'whitesmoke' // Optional: change text color on hover
-                    }
-                }}
-            >
-                <AccountCircleIcon fontSize="small" />
-                <Box ml={0.5} >
-                    <Typography fontSize="1rem" lineHeight={1.5} textTransform={"none"}>
-                        Login
-                    </Typography>
-                </Box>
+            {account ? <Profile account={account} setAccount={setAccount}/> :
+                <Button
+                    onClick={() => openDialog()}
+                    variant="outlined"
+                    color="white"
+                    sx={{
+                        '&:hover': {
+                            backgroundColor: 'rgba(255, 255, 255, 0.1)', // Change to your desired hover color
+                            color: 'whitesmoke' // Optional: change text color on hover
+                        }
+                    }}
+                >
+                    <AccountCircleIcon fontSize="small" />
+                    <Box ml={0.5} >
+                        <Typography fontSize="1rem" lineHeight={1.5} textTransform={"none"}>
+                            Login
+                        </Typography>
+                    </Box>
 
-            </Button>
+                </Button>
+            }
 
             {/* Reorder Section */}
             <Box display="flex" alignItems="center">
@@ -58,7 +63,7 @@ const CustomButtons = () => {
                 </IconButton>
                 <Typography fontSize="0.875rem" style={{ marginTop: "-8px" }}>Cart</Typography>
             </Box>
-            <LoginDialog open={open} setOpen={setOpen}/>
+            <LoginDialog open={open} setOpen={setOpen} />
         </Box>
     );
 };

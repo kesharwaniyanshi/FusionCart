@@ -12,7 +12,7 @@ const home = async (req, res) => {
 // registration logic
 const register = async (req, res) => {
     try {
-        const { name, email, phone, password } = req.body;
+        const { firstname,lastname, email, phoneNumber, password } = req.body;
 
         // Check if the user already exists
         const userExist = await User.findOne({ email });
@@ -27,7 +27,7 @@ const register = async (req, res) => {
         // const saltRound=10;
         // const hash_password=await bcrypt.hash(password,saltRound);
 
-        const newUser = new User({ name, email, phone, password });
+        const newUser = new User({ firstname,lastname, email, phoneNumber, password });
         await newUser.save();
 
         res
@@ -37,7 +37,8 @@ const register = async (req, res) => {
                 token: await newUser.generateToken(),
                 userId: newUser._id.toString()
             });
-    }
+        // console.log(req.body);
+        }
     catch (error) {
         console.log(error);
         res.status(500).send(error);
