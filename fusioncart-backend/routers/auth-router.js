@@ -1,8 +1,11 @@
+const  {getProducts}  =require( '../Controller/product-controller');
 const express = require('express');
 const router = express.Router();
 const authcontroller = require("../Controller/auth-controller");
 const validate = require("../middlewares/validator-middleware");
 const { loginSchema, signupSchema } = require("../validators/auth-validators");
+
+
 // const authMiddleware = require("../middlewares/auth-middleware");
 
 // router.route("/").get(authcontroller.home);
@@ -17,6 +20,8 @@ const { loginSchema, signupSchema } = require("../validators/auth-validators");
 
 router.post('/signup', authcontroller.register);
 router.post('/login', authcontroller.login);
+
+router.get("/product",getProducts);
 
 
 
