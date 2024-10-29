@@ -35,7 +35,8 @@ const register = async (req, res) => {
             .json({
                 msg: "User Registered Successfully",
                 token: await newUser.generateToken(),
-                userId: newUser._id.toString()
+                userId: newUser._id.toString(),
+                
             });
         // console.log(req.body);
         }
@@ -64,7 +65,8 @@ const login = async (req, res) => {
                 .json({
                     msg: "Login Successful!!",
                     token: await userExist.generateToken(),
-                    userId: userExist._id.toString()
+                    userId: userExist._id.toString(),
+                    firstname: userExist.firstname,
                 });
         }
 

@@ -15,7 +15,8 @@ const { loginSchema, signupSchema } = require("../validators/auth-validators");
 // router.route("/signup").post(validate(signupSchema),authcontroller.register);
 // router.route("/login").post(validate(loginSchema),authcontroller.login);
 
-router.post('/signup',authcontroller.register);
+router.post('/signup', authcontroller.register);
+router.post('/login', authcontroller.login);
 
 
 
