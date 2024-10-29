@@ -4,10 +4,10 @@ import time
 from googleapiclient.errors import HttpError
 
 # Your Google Custom Search API key and search engine ID
-API_KEY = "AIzaSyBHQ2BDclENB8zguc_E4QTyIID_HbBw1eE"  # Update with your valid API key
-SEARCH_ENGINE_ID = "b4ba369391c7e4e91"
-# API_KEY = "AIzaSyB8GR91OR-fCQxLqvloAGbxFRR42XQv2kg"
-# SEARCH_ENGINE_ID = "34168807f6c364d1e"
+# API_KEY = "AIzaSyBHQ2BDclENB8zguc_E4QTyIID_HbBw1eE"  # Update with your valid API key
+# SEARCH_ENGINE_ID = "b4ba369391c7e4e91"
+API_KEY = "AIzaSyB8GR91OR-fCQxLqvloAGbxFRR42XQv2kg"
+SEARCH_ENGINE_ID = "34168807f6c364d1e"
 
 # Build the custom search service
 service = build("customsearch", "v1", developerKey=API_KEY)
@@ -71,7 +71,7 @@ df = pd.read_csv("supermarket_dataset_4floors_4sections.csv")
 existing_df = pd.read_csv("updated_supermarket_dataset_limited.csv")
 
 # Fetch the records from index 106 to the next 100 records (106 to 205)
-new_records_df = df.iloc[514:517]
+new_records_df = df.iloc[617:717]
 
 # Apply the fetch_image_url function to the "Product Name" and "Brand Name" columns for new records
 new_records_df["Image URL"] = new_records_df.apply(

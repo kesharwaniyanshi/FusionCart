@@ -6,44 +6,47 @@ const { Box, Typography, Menu, MenuItem, styled } = require("@mui/material")
 const Component = styled(Menu)`
 margin-top:5px;
 `;
-
-const Logout=styled(Typography)`
-font-size:14px;
-margin-left:20px;
+const Logout = styled(Typography)`
+  font-size: 14px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
 `;
 
-const Profile = ({ account,setAccount }) => {
-
+const Profile = ({ account, setAccount }) => {
     const [open, setOpen] = useState(false);
+
     const handleClick = (event) => {
-        setOpen(event.currentTarget)
-    }
+        setOpen(event.currentTarget);
+    };
+
     const handleClose = () => {
         setOpen(false);
-    }
-    const logoutUser=()=>{
+    };
+
+    const logoutUser = () => {
         setAccount('');
-    }
+    };
+
     return (
         <>
             <Box onClick={handleClick}>
                 <Typography style={{ marginTop: 2 }}>{account}</Typography>
                 <Component
-
                     anchorEl={open}
                     open={Boolean(open)}
                     onClose={handleClose}
-
                 >
-                    <MenuItem onClick={()=>{handleClose();logoutUser()}}>
+                    <MenuItem onClick={() => { handleClose(); logoutUser(); }}>
                         <Logout>
-                            <PowerSettingsNewIcon  fontSize='small'/>
-                            Logout</Logout>
+                            <PowerSettingsNewIcon fontSize="small" style={{ marginRight: 5 }} />
+                            Logout
+                        </Logout>
                     </MenuItem>
-
                 </Component>
             </Box>
         </>
-    )
-}
+    );
+};
+
 export default Profile;

@@ -1,7 +1,7 @@
 import { Box, Dialog, TextField, Button, Typography, styled } from "@mui/material";
 import { useState, useContext } from "react";
 import { DataContext } from "../../context/DataProvider";
-import { authenticateSignup } from "../../service/api";
+import { authenticateSignup, authenticateLogin } from "../../service/api";
 
 const Component = styled(Box)`
 height: 70vh;
@@ -56,6 +56,14 @@ font-weight: bold;
 cursor: pointer
 `;
 
+const Error = styled(Typography)`
+font-size:10px;
+color: #FF6161;
+line-height:0;
+margin-top:10px;
+font-weight:500
+`;
+
 const accountInitialValues = {
     login: {
         view: "login",
@@ -88,11 +96,13 @@ const LoginDialog = ({ open, setOpen }) => {
     const [signup, setSignup] = useState(signupInitialValue);
     const { setAccount } = useContext(DataContext);
     const [login, setLogin] = useState(loginInitialValue);
+    const [error, setError] = useState(false);
 
 
     const handleClose = () => {
         setOpen(false);
         toggleAccount(accountInitialValues.login);
+        setError(false); 
     }
 
     const toggleSignUp = () => {
@@ -114,8 +124,18 @@ const LoginDialog = ({ open, setOpen }) => {
     const onValueChange = (e) => {
         setLogin({ ...login, [e.target.name]: e.target.value });
     }
-    const loginUser = () => {
-
+    const loginUser = async () => {
+        let response = await authenticateLogin(login);
+        console.log(response.data);
+        if (response.status === 201) {
+            handleClose();
+            setAccount(response.data.firstname);
+        }
+        else{
+            setError(true);
+            // setLogin({...login, password: "" });
+            // console.log("Invalid credentials");
+        }
     }
 
     return (
@@ -129,8 +149,9 @@ const LoginDialog = ({ open, setOpen }) => {
                     </Image>
                     {account.view === "login" ?
                         <Wrapper>
-                            <TextField variant="standard" onChange={(e) => onValueChange(e)} name="email" label="Enter Email/Phone number" />
+                            <TextField variant="standard" onChange={(e) => onValueChange(e)} name="email" label="Enter Email" />
                             <TextField variant="standard" onChange={(e) => onValueChange(e)} name="password" label="Enter Password" />
+                            {error && <Error>Please enter valid email or password</Error>}
                             <Text>By continuing, you agree to FusionCarts's Terms of Use and Privacy Policy.</Text>
                             <LoginButton onClick={() => loginUser()} >Login</LoginButton>
                             <Typography style={{ textAlign: "center" }}>OR</Typography>
@@ -143,7 +164,7 @@ const LoginDialog = ({ open, setOpen }) => {
                             <TextField variant="standard" onChange={(e) => onInputChange(e)} name='lastname' label='Enter Lastname' />
                             <TextField variant="standard" onChange={(e) => onInputChange(e)} name='email' label='Enter Email' />
                             <TextField variant="standard" onChange={(e) => onInputChange(e)} name='password' label='Enter Password' />
-                            <TextField variant="standard" onChange={(e) => onInputChange(e)} name='phone' label='Enter Phone' />
+                            <TextField variant="standard" onChange={(e) => onInputChange(e)} name='phoneNumber' label='Enter Phone' />
                             <LoginButton onClick={() => signupUser()} >Continue</LoginButton>
                         </Wrapper>
                     }
