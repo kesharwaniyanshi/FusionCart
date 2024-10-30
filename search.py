@@ -71,7 +71,8 @@ df = pd.read_csv("supermarket_dataset_4floors_4sections.csv")
 existing_df = pd.read_csv("updated_supermarket_dataset_limited.csv")
 
 # Fetch the records from index 106 to the next 100 records (106 to 205)
-new_records_df = df.iloc[617:717]
+new_records_df = df.iloc[717:801]
+
 
 # Apply the fetch_image_url function to the "Product Name" and "Brand Name" columns for new records
 new_records_df["Image URL"] = new_records_df.apply(
