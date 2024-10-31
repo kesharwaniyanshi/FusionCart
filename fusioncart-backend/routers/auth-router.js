@@ -21,7 +21,7 @@ const { loginSchema, signupSchema } = require("../validators/auth-validators");
 router.post('/signup', authcontroller.register);
 router.post('/login', authcontroller.login);
 
-router.get("/product",getProducts);
+router.get("/products",getProducts);
 
 
 

@@ -36,7 +36,9 @@ const Banner = () => {
                 draggable={false}
                 infinite={true}
                 autoPlay={true}
-                autoPlaySpeed={4000}
+                autoPlaySpeed={3000}
+                keyBoardControl={true}
+                slidesToSlide={1}
                 containerClass="carousel-container"
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"

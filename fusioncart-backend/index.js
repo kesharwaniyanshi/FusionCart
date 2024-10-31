@@ -5,6 +5,7 @@ const connectDb = require("./utils/db");
 const authRoute = require("./routers/auth-router");
 const errorMiddleware = require('./middlewares/error-middleware');
 const dotenv = require('dotenv');
+const DefaultData = require('./default');
 
 dotenv.config();
 app.use(cors());
@@ -24,3 +25,6 @@ connectDb().then(() => {
 }).catch((error) => {
     console.error("Failed to connect to the database", error);
 });
+
+
+DefaultData();
