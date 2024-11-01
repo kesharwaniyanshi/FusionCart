@@ -57,13 +57,22 @@ const Image=styled("img")`
 width:auto;
 height:150px;
 `;
+
+
+
 const Slide = ({ products }) => {
     const timerURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/timer_a73398.svg';
     const renderer = ({ hours, minutes, seconds }) => {
         return <Box variant="span">{hours}:{minutes}:{seconds} Left</Box>
-
-
+        
+        
     }
+    const uniqueProducts = products.reduce((acc, product) => {
+        if (!acc.find(item => item.product_name === product.product_name)) {
+            acc.push(product);
+        }
+        return acc;
+    }, []);
     return (
         <Component>
             <Deal>
@@ -94,9 +103,17 @@ const Slide = ({ products }) => {
                 itemClass="carousel-item-padding-40-px"
                 responsive={responsive}
             >
-                {products.map(product => (
+                {/* {products.map(product => (
                     <Box textAlign={"center"} style={{padding: "25px 15px"}}>
                     <Image src={product.image_url} alt="products" />
+                    <Typography>{product.product_name}</Typography>
+                    </Box>
+                ))} */}
+
+                {uniqueProducts.map(product => (
+                    <Box key={product.product_id} textAlign={"center"} style={{ padding: "25px 15px" }}>
+                        <Image src={product.image_url} alt="products" />
+                        <Typography>{product.product_name}</Typography>
                     </Box>
                 ))}
             </Carousel>
