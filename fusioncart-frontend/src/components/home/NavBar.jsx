@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, styled, Link, Box, Typography } from "@mui/material";
+import { AppBar, Toolbar, styled, Link, Box, Typography,useTheme,useMediaQuery } from "@mui/material";
 import Category from "./category";
 
 const StyledHeader = styled(AppBar)(({ theme }) => ({
@@ -24,6 +24,13 @@ const navLinks = [
 ];
 
 const NavBar = () => {
+
+    const theme = useTheme();
+    const isHidden = useMediaQuery(theme.breakpoints.down("md")); // Adjust the breakpoint as needed
+
+    if (isHidden) {
+        return null; // Hide the NavBar component at the specified breakpoint
+    }
     return (
         <StyledHeader>
             <Toolbar>

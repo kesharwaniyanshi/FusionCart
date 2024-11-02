@@ -1,4 +1,4 @@
-import { Box, Typography, IconButton, Badge, Button } from "@mui/material";
+import { Box, Typography, IconButton, Badge, Button, styled } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -6,6 +6,13 @@ import LoginDialog from "../login/loginDialog";
 import { useState, useContext } from "react";
 import { DataContext } from "../../context/DataProvider";
 import Profile from "./Profile";
+
+const CustomButtonWrapper =styled(Box)(({theme})=>({
+    margin:"0 5% 0 auto",
+    [theme.breakpoints.down("md")]:{
+        display:"none",
+    }
+}));
 
 const CustomButtons = () => {
 
@@ -16,6 +23,7 @@ const CustomButtons = () => {
         setOpen(true);
     }
     return (
+        <CustomButtonWrapper>
         <Box display="flex" alignItems="center" gap={6}>
 
             {/* Sign In Section */}
@@ -65,6 +73,7 @@ const CustomButtons = () => {
             </Box>
             <LoginDialog open={open} setOpen={setOpen} />
         </Box>
+        </CustomButtonWrapper>
     );
 };
 
