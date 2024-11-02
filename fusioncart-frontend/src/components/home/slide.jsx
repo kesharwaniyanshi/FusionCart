@@ -2,6 +2,7 @@ import { Box, Button, Divider, styled, Typography } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Countdown from "react-countdown";
+import { Link } from "react-router-dom";
 
 
 const responsive = {
@@ -53,19 +54,24 @@ font-weight:600;
 
 `;
 
-const Image=styled("img")`
+const Image = styled("img")`
 width:auto;
 height:150px;
 `;
 
+const Text = styled(Typography)`
+font-size:14px;
+margin-top:5px;
+
+;`
 
 
-const Slide = ({ products }) => {
+const Slide = ({ products, title, timer }) => {
     const timerURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/timer_a73398.svg';
     const renderer = ({ hours, minutes, seconds }) => {
         return <Box variant="span">{hours}:{minutes}:{seconds} Left</Box>
-        
-        
+
+
     }
     const uniqueProducts = products.reduce((acc, product) => {
         if (!acc.find(item => item.product_name === product.product_name)) {
@@ -76,19 +82,22 @@ const Slide = ({ products }) => {
     return (
         <Component>
             <Deal>
-                <DealText>Deal of the Day</DealText>
-                <Timer>
+                <DealText>{title}</DealText>
+                {timer &&
+                 <Timer>
                     <img src={timerURL} alt="timer" style={{ width: 24 }} />
                     <Countdown
                         date={Date.now() + 5.04e+7}
                         renderer={renderer}
                     />
                 </Timer>
+                }
                 <ViewAllButton variant="contained" style={{ background: "RGB(43,99,86)"}}>
                     View All
                 </ViewAllButton>
+                
             </Deal>
-                <Divider/>
+            <Divider />
 
             <Carousel
                 swipeable={false}
@@ -111,10 +120,14 @@ const Slide = ({ products }) => {
                 ))} */}
 
                 {uniqueProducts.map(product => (
+                    <Link to={`/product/${product.product_id}`} style={{textDecoration:"none"}}>
                     <Box key={product.product_id} textAlign={"center"} style={{ padding: "25px 15px" }}>
                         <Image src={product.image_url} alt="products" />
-                        <Typography>{product.product_name}</Typography>
+                        <Text style={{ fontWeight: 600, color: "#212121" }}>{product.product_name}</Text>
+                        <Text style={{ color: "green" }}>Upto {(Math.floor(Math.random() * 18) + 1) * 5}% off</Text>
+                        <Text style={{ color: "7f7f7f", opacity: "0.6" }}>{product.category}</Text>
                     </Box>
+                    </Link>
                 ))}
             </Carousel>
         </Component>

@@ -1,9 +1,9 @@
-const  {getProducts}  =require( '../Controller/product-controller');
+const  {getProducts,getProductById}  =require( '../Controller/product-controller');
 const express = require('express');
 const router = express.Router();
 const authcontroller = require("../Controller/auth-controller");
 const validate = require("../middlewares/validator-middleware");
-const { loginSchema, signupSchema } = require("../validators/auth-validators");
+// const { loginSchema, signupSchema } = require("../validators/auth-validators");
 
 
 // const authMiddleware = require("../middlewares/auth-middleware");
@@ -22,6 +22,7 @@ router.post('/signup', authcontroller.register);
 router.post('/login', authcontroller.login);
 
 router.get("/products",getProducts);
+router.get("/product/:product_id",getProductById);
 
 
 

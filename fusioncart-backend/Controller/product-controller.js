@@ -10,4 +10,16 @@ const productModel =require( "../models/product-model");
         console.error(error);
     }
 }
-module.exports={getProducts};
+
+
+const getProductById = async (req, res) => {
+    try {
+        const product= await productModel.findOne({product_id:req.params.product_id});
+        res.status(200).json(product);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+        console.error(error);
+    }
+}
+
+module.exports={getProducts,getProductById};

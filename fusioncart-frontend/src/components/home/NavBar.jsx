@@ -1,11 +1,14 @@
 import { AppBar, Toolbar, styled, Link, Box, Typography } from "@mui/material";
 import Category from "./category";
 
-const StyledHeader = styled(AppBar)`
-    background: #F8F8F8;
-    margin-top: 65px;
-    height: 55px;
-`;
+const StyledHeader = styled(AppBar)(({ theme }) => ({
+    background: "#F8F8F8",
+    marginTop: "65px",
+    height: "55px",
+    [theme.breakpoints.down('lg')]: {
+        margin: 0
+    }
+}));
 
 const navLinks = [
     "Groceries",
