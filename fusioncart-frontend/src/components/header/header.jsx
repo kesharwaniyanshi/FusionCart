@@ -1,7 +1,8 @@
 import { AppBar, Box, Toolbar, IconButton, styled, Drawer, List, ListItem} from "@mui/material";
 import {Menu} from "@mui/icons-material"
 import Search from "./search";
-import {CustomButtons, MenuButton, CustomButtonWrapper} from "./customButtons";
+import CustomButtons from "./customButtons";
+// import { MenuButton } from "./customButtons";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -10,12 +11,21 @@ const StyledHeader = styled(AppBar)`
     ${'' /* height: 55px; */}
 `;
 
-const Component = styled(Link)`
-    margin-left: 10%;
-    display: flex;
-    align-items: center; // Center items vertically
-`;
+const Component = styled(Link)(({ theme }) => ({
+    marginLeft: "10%",
+    display: "flex",
+    alignItems: "center", // Center items vertically
+    [theme.breakpoints.down("md")]: {
+        display: "none", // Hide the logo on medium and smaller screens
+    }
+}));
+const MenuButton = styled(IconButton)(({ theme }) => ({
+    display: "none",
+    [theme.breakpoints.down("md")]: {
+        display: "block",
+    }
 
+}));
 
 const Header = () => {
 
@@ -28,15 +38,15 @@ const Header = () => {
         setOpen(false);
     };
     
-    const list = () => {
+    const list = () => (
         <Box style={{width: 200 }} onClick={handleClose}>
             <List>
                 <ListItem button>
-                    <CustomButtons />
+                    <CustomButtons drawer={true} />
                 </ListItem>
             </List>
         </Box>
-    }
+        );
     return (
         <StyledHeader>
             <Toolbar style={{ display: 'flex', justifyContent: 'space-evenly' }}>
@@ -45,6 +55,7 @@ const Header = () => {
                 </MenuButton>
                 <Drawer open={open} onClose={handleClose}>
                      {list()}
+                     {/* hello */}
                 </Drawer>
                 <Component to="/">
                     <img src="/images/fusioncart Logo.png" alt="Fusioncart Logo" style={{ width: 160 }} />

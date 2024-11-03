@@ -120,12 +120,12 @@ const Slide = ({ products, title, timer }) => {
                 ))} */}
 
                 {uniqueProducts.map(product => (
-                    <Link to={`/product/${product.product_id}`} style={{textDecoration:"none"}}>
+                    <Link key={product.product_id} to={`/product/${product.product_id}`} style={{textDecoration:"none"}}>
                     <Box key={product.product_id} textAlign={"center"} style={{ padding: "25px 15px" }}>
                         <Image src={product.image_url} alt="products" />
                         <Text style={{ fontWeight: 600, color: "#212121" }}>{product.product_name}</Text>
                         <Text style={{ color: "green" }}>Upto {(Math.floor(Math.random() * 18) + 1) * 5}% off</Text>
-                        <Text style={{ color: "7f7f7f", opacity: "0.6" }}>{product.category}</Text>
+                        <Text style={{ color: "#7f7f7f", opacity: "0.6" }}>{product.category}</Text>
                     </Box>
                     </Link>
                 ))}
