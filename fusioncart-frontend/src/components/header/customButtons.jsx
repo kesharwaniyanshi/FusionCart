@@ -14,6 +14,14 @@ const CustomButtonWrapper =styled(Box)(({theme})=>({
     }
 }));
 
+const MenuButton =styled(IconButton)(({theme})=>({
+    display:"none",
+    [theme.breakpoints.down("md")]:{
+        display:"block",
+    }
+
+}));
+
 const CustomButtons = () => {
 
     const [open, setOpen] = useState(false);
