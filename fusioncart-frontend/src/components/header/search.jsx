@@ -1,4 +1,4 @@
-import { Box, InputBase, styled, List, ListItem } from "@mui/material";
+import { Box, InputBase, styled, List, ListItem, Typography } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
@@ -24,6 +24,11 @@ const InputSearchBase = styled(InputBase)`
 padding-left:20px;
 width: 100%;
 `;
+const SectionTitle = styled(Typography)`
+ margin-top: 20px; font-weight: bold; 
+ position:absolute;
+ color:black;
+ `;
 
 const ListWrapper = styled(List)`
 position:absolute;
@@ -33,7 +38,7 @@ margin-top:40px;
 margin-left:15px;
 width:35%;
   max-height: 50vh; // Limits the dropdown to half of the viewport height
-  z-index: 1000; // Ensures it stays on top of other elements
+  z-index: 1300; // Ensures it stays on top of other elements
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px; // Optional: rounded corners
   padding: 10px 0; // Adds padding for better aesthetics
@@ -61,22 +66,48 @@ const Search = () => {
             />
             <Box style={{ color: "RGB(43, 99, 86)", padding: "5px" }}><SearchIcon /></Box>
             {
-                text && <ListWrapper>
-                    {
-                        products.filter(product => (product.product_name.toLowerCase().includes(text.toLowerCase())) || product.brand.toLowerCase().includes(text.toLowerCase()) || product.category.toLowerCase().includes(text.toLowerCase())).map(product => (
-                            <ListItem>
-                                <Link to={`product/${product.product_id}`}
-                                    onClick={() => { setText('') }}
-                                    style={{ textDecoration: 'none', color: 'inherit' }}
-                                >
-                                    {product.brand} {product.product_name}   <span style={{ color: "#878787", fontSize: "12px" }}>Category {product.category}</span>
-                                </Link>
-                            </ListItem>
-                        )
-                        )
-                    }
-                </ListWrapper>
-            }
+                text && (
+                    <>
+                        <SectionTitle>Previously Purchased by You</SectionTitle>
+                        {/* <ListWrapper> {previouslyPurchased.map(product => (<ListItem key={product.product_id}>
+                            <Link to={`product/${product.product_id}`} style={{ textDecoration: 'none', color: 'inherit' }} >
+                                <img src={product.image_url} alt={product.product_name} style={{ width: '50px', marginRight: '10px' }} /> {product.brand} {product.product_name} <span style={{ color: "#878787", fontSize: "12px" }}>Category {product.category}</span> </Link>
+                        </ListItem>))}
+                        </ListWrapper>  */}
+                        <ListWrapper><ListItem>HI</ListItem></ListWrapper>
+
+                        <SectionTitle>Frequently Bought Together</SectionTitle>
+                        {/* <ListWrapper> {frequentlyBoughtTogether.map(product => (<ListItem key={product.product_id}>
+                            <Link to={`product/${product.product_id}`} style={{ textDecoration: 'none', color: 'inherit' }} >
+                                <img src={product.image_url} alt={product.product_name} style={{ width: '50px', marginRight: '10px' }} />
+                                {product.brand} {product.product_name} <span style={{ color: "#878787", fontSize: "12px" }}>Category {product.category}</span> </Link>
+                        </ListItem>
+                        ))}
+                        </ListWrapper>  */}
+                        <ListWrapper><ListItem>HI</ListItem></ListWrapper>
+                        <ListWrapper>
+                            {
+                                products.filter(product => (product.product_name.toLowerCase().includes(text.toLowerCase())) || product.brand.toLowerCase().includes(text.toLowerCase()) || product.category.toLowerCase().includes(text.toLowerCase())).map(product => (
+                                    <ListItem>
+
+                                        <Link to={`product/${product.product_id}`}
+                                            onClick={() => { setText('') }}
+                                            style={{ textDecoration: 'none', color: 'inherit' }}
+                                        >
+                                            <img src={product.image_url} alt={product.product_name} style={{ width: '40px', marginRight: '8px' }} />
+                                            {product.brand} {product.product_name}   <span style={{ color: "#878787", fontSize: "12px" }}>Category {product.category}</span>
+                                        </Link>
+                                    </ListItem>
+                                )
+                                )
+                            }
+                        </ListWrapper>
+
+
+
+                    </>)}
+
+
         </SearchContainer>
     )
 }
