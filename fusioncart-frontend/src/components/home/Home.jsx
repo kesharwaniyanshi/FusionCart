@@ -25,7 +25,7 @@ const Home = () => {
     }, [dispatch])
     return (
         <>
-            <NavBar />
+            {/* <NavBar /> */}
             <Component>
                 <Banner />
                 <Slide products={products}  title="Deal of the Day" timer={true}  />
