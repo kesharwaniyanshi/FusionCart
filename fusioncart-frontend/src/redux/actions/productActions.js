@@ -2,7 +2,7 @@
 import axios from "axios";
 import * as actionTypes from "../constants/productConstants"
 
-const URL = "";
+const URL = "https://fusion-cart-api.vercel.app";
 // const URL = "http://localhost:5000";
 export const getProducts=()=>async(dispatch)=>{
     try {    
