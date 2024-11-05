@@ -10,8 +10,8 @@ const DefaultData = require('./default');
 dotenv.config();
 
 const corsOptions = {
-    origin: ['https://FusionCart-frontend.vercel.app'],
-    methods: "GET,POST",
+    origin: ['https://fusion-cart-frontend.vercel.app/'],
+    methods: ["GET","POST"],
     credentials: true,
 };
 app.use(cors(corsOptions));
