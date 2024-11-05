@@ -1,0 +1,5 @@
+node_modules
+package-lock.json
+.env
+fusioncart-frontend/node_modules
+fusioncart-frontend/package-lock.json

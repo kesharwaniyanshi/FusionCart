@@ -18,6 +18,11 @@ app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 5000;
 
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('fusioncart-frontend/build'));
+}
+
+
 connectDb().then(() => {
     app.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);
