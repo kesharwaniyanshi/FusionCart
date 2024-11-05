@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = "";
+const URL = "https://fusion-cart-api.vercel.app/";
 // const URL = "http://localhost:5000";
 
 export const authenticateSignup = async (data) => {
