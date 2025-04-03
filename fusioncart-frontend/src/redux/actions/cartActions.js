@@ -1,4 +1,4 @@
-import axios from "axios";
+ import axios from "axios";
 import * as actionTypes from "../constants/cartConstant";
 
 const URL = process.env.NODE_ENV === "development" ? "http://localhost:5000" : "https://fusion-cart-api.vercel.app";

@@ -1,6 +1,7 @@
 import { Box, styled, Typography, Grid, Table, TableBody, TableRow, TableCell, TableHead, TableFooter } from "@mui/material";
+import { PriceContext } from "../../context/PriceProvider";
+import { useContext } from "react";
 import LocalOfferIcon from '@mui/icons-material/LocalOffer'; <LocalOfferIcon />
-
 
 const SmallText = styled(Box)`
 font-size:14px;
@@ -29,14 +30,16 @@ vertical-align:baseline;
 
 const ProductDetail = ({ product }) => {
 
+    const { getPriceDetails } = useContext(PriceContext);
     const quantity = product.quantity;
-    const actualPrice = product?.price || 0; // Default to 0 if price is undefined
-    const randomPrice = parseFloat((actualPrice + Math.floor(Math.random() * (actualPrice * 0.5) + 1)).toFixed(2));
+    // const actualPrice = product?.price || 0; // Default to 0 if price is undefined
+    // const randomPrice = parseFloat((actualPrice + Math.floor(Math.random() * (actualPrice * 0.5) + 1)).toFixed(2));
 
-    const discountPercentage = randomPrice > 0
-        ? Math.floor(((randomPrice - actualPrice) / randomPrice) * 100)
-        : 0;
+    // const discountPercentage = randomPrice > 0
+    //     ? Math.floor(((randomPrice - actualPrice) / randomPrice) * 100)
+    //     : 0;
 
+    const { actualPrice, randomPrice, discountPercentage } = getPriceDetails(product);
     const date = new Date(new Date().getTime() + (5 * 24 * 60 * 60 * 1000));
     return (
         <>

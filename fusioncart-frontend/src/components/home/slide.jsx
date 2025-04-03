@@ -73,29 +73,37 @@ const Slide = ({ products, title, timer }) => {
 
 
     }
-    const uniqueProducts = products.reduce((acc, product) => {
-        if (!acc.find(item => item.product_name === product.product_name)) {
-            acc.push(product);
+
+    const filteredProducts = title === "Deal of the Day" ?
+        products.reduce((acc, product) => {
+            if (!acc.find(item => item.product_name === product.product_name)) {
+                acc.push(product);
+            }
+            return acc;
+        }, [])
+         :
+         products.filter(product => {
+            return (title === product.category)
         }
-        return acc;
-    }, []);
+        )
+
     return (
         <Component>
             <Deal>
                 <DealText>{title}</DealText>
                 {timer &&
-                 <Timer>
-                    <img src={timerURL} alt="timer" style={{ width: 24 }} />
-                    <Countdown
-                        date={Date.now() + 5.04e+7}
-                        renderer={renderer}
-                    />
-                </Timer>
+                    <Timer>
+                        <img src={timerURL} alt="timer" style={{ width: 24 }} />
+                        <Countdown
+                            date={Date.now() + 5.04e+7}
+                            renderer={renderer}
+                        />
+                    </Timer>
                 }
-                <ViewAllButton variant="contained" style={{ background: "RGB(43,99,86)"}}>
+                <ViewAllButton variant="contained" style={{ background: "RGB(43,99,86)" }}>
                     View All
                 </ViewAllButton>
-                
+
             </Deal>
             <Divider />
 
@@ -119,14 +127,15 @@ const Slide = ({ products, title, timer }) => {
                     </Box>
                 ))} */}
 
-                {uniqueProducts.map(product => (
-                    <Link key={product.product_id} to={`/product/${product.product_id}`} style={{textDecoration:"none"}}>
-                    <Box key={product.product_id} textAlign={"center"} style={{ padding: "25px 15px" }}>
-                        <Image src={product.image_url} alt="products" />
-                        <Text style={{ fontWeight: 600, color: "#212121" }}>{product.product_name}</Text>
-                        <Text style={{ color: "green" }}>Upto {(Math.floor(Math.random() * 18) + 1) * 5}% off</Text>
-                        <Text style={{ color: "#7f7f7f", opacity: "0.6" }}>{product.category}</Text>
-                    </Box>
+                {filteredProducts.map(product => (
+                    <Link key={product.product_id} to={`/product/${product.product_id}`} style={{ textDecoration: "none" }}>
+                        <Box key={product.product_id} textAlign={"center"} style={{ padding: "25px 15px" }}>
+                            <Image src={product.image_url} alt="products" />
+                            <Text style={{ fontWeight: 600, color: "#212121" }}>{product.brand}</Text>
+                            <Text style={{ fontWeight: 500, color: "#7f7f7f" }}>{product.product_name}</Text>
+                            <Text style={{ color: "green" }}>Upto {(Math.floor(Math.random() * 18) + 1) * 5}% off</Text>
+                            <Text style={{ color: "#7f7f7f", opacity: "0.6" }}>{product.category}</Text>
+                        </Box>
                     </Link>
                 ))}
             </Carousel>

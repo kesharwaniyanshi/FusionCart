@@ -1,7 +1,8 @@
 import { Box, Dialog, TextField, Button, Typography, styled } from "@mui/material";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { DataContext } from "../../context/DataProvider";
 import { authenticateSignup, authenticateLogin } from "../../service/api";
+import { jwtDecode } from "jwt-decode";
 
 const Component = styled(Box)`
 height: 70vh;
@@ -102,7 +103,7 @@ const LoginDialog = ({ open, setOpen }) => {
     const handleClose = () => {
         setOpen(false);
         toggleAccount(accountInitialValues.login);
-        setError(false); 
+        setError(false);
     }
 
     const toggleSignUp = () => {
@@ -131,12 +132,120 @@ const LoginDialog = ({ open, setOpen }) => {
             handleClose();
             setAccount(response.data.firstname);
         }
-        else{
+        else {
             setError(true);
             // setLogin({...login, password: "" });
             // console.log("Invalid credentials");
         }
     }
+    const [user, setUser] = useState({});
+    function handleCallbackresponse(response) {
+        console.log("Encoded JWT ID token: ", response.credential);
+        const userObject = jwtDecode(response.credential);
+        console.log("Decoded JWT ID token: ", userObject);
+
+        setUser(userObject);
+        setAccount(userObject.name); // Save user name in context
+
+        document.getElementById("signInDiv").style.display = "none";
+    }
+
+
+    function handleSignOut() {
+        setUser({});
+        setAccount(null);
+        window.google.accounts.id.disableAutoSelect();
+        document.getElementById("signInDiv").style.display = "flex";
+    }
+
+
+    // useEffect(() => {
+    //     const loadGoogleScript = () => {
+    //         if (window.google) {
+    //             window.google.accounts.id.initialize({
+    //                 client_id: "294014824025-50eid1q5sjo9o8fk0ncmheteja229r4m.apps.googleusercontent.com",
+    //                 callback: handleCallbackresponse,
+    //             });
+
+    //             window.google.accounts.id.renderButton(
+    //                 document.getElementById("signInDiv"),
+    //                 { size: "large", theme: "outline" }
+    //             );
+    //         } else {
+    //             console.error("Google API script not loaded.");
+    //         }
+    //     };
+
+    //     loadGoogleScript();
+    // }, []);
+    // useEffect(() => {
+    //     const loadGoogleScript = () => {
+    //         if (!document.getElementById("google-script")) {
+    //             const script = document.createElement("script");
+    //             script.src = "https://accounts.google.com/gsi/client";
+    //             script.id = "google-script";
+    //             script.async = true;
+    //             script.defer = true;
+    //             script.onload = initializeGoogleSignIn;
+    //             document.body.appendChild(script);
+    //         } else {
+    //             setTimeout(() => initializeGoogleSignIn(), 500);
+
+    //         }
+    //     };
+
+    //     const initializeGoogleSignIn = () => {
+    //         const signInDiv = document.getElementById("signInDiv");
+
+    //         if (window.google && signInDiv) {
+    //             console.log("Rendering Google button...");
+    //             window.google.accounts.id.initialize({
+    //                 client_id: "294014824025-50eid1q5sjo9o8fk0ncmheteja229r4m.apps.googleusercontent.com",
+    //                 callback: handleCallbackresponse,
+    //             });
+    //             window.google.accounts.id.renderButton(signInDiv, { size: "large", theme: "outline" });
+    //         } else {
+    //             console.error("Google API is not available or signInDiv not found");
+    //         }
+    //     };
+
+    //     loadGoogleScript();
+    // }, []);
+    useEffect(() => {
+        const initializeGoogleSignIn = () => {
+            const signInDiv = document.getElementById("signInDiv");
+
+            if (!window.google) {
+                console.error("Google API is not available. Make sure the script has loaded.");
+                return;
+            }
+
+            if (!signInDiv) {
+                console.error("signInDiv not found. Ensure that <div id='signInDiv'></div> exists in the JSX.");
+                return;
+            }
+
+            console.log("Rendering Google sign-in button...");
+            window.google.accounts.id.initialize({
+                client_id: "294014824025-50eid1q5sjo9o8fk0ncmheteja229r4m.apps.googleusercontent.com",
+                callback: handleCallbackresponse,
+            });
+            window.google.accounts.id.renderButton(signInDiv, { size: "large", theme: "outline" });
+        };
+        if (window.google) {
+            initializeGoogleSignIn();
+        } else {
+            const interval = setInterval(() => {
+                if (window.google) {
+                    clearInterval(interval);
+                    initializeGoogleSignIn();
+                }
+            }, 500);
+        }
+    }, []);
+
+
+
 
     return (
         <Dialog open={open} onClose={handleClose} PaperProps={{ sx: { maxWidth: "unset" } }}>
@@ -147,6 +256,8 @@ const LoginDialog = ({ open, setOpen }) => {
                         <Typography style={{ marginTop: "30px", color: "#FFF", fontWeight: 600 }}>{account.subHeading}</Typography>
                         <img src="/images/online-shopping-discount.png" width={"100%"} style={{ marginTop: "70px" }} />
                     </Image>
+
+
                     {account.view === "login" ?
                         <Wrapper>
                             <TextField variant="standard" onChange={(e) => onValueChange(e)} name="email" label="Enter Email" />
@@ -157,7 +268,12 @@ const LoginDialog = ({ open, setOpen }) => {
                             <Typography style={{ textAlign: "center" }}>OR</Typography>
                             <RequestOTP>Request OTP</RequestOTP>
                             <CreateAccount onClick={() => toggleSignUp()}>New to FusionCart? Create an account</CreateAccount>
+                    <div div id="signInDiv" style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}></div>
+
+
+                            {/* <div div id="signInDiv" style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}></div> */}
                         </Wrapper>
+
                         :
                         <Wrapper>
                             <TextField variant="standard" onChange={(e) => onInputChange(e)} name='firstname' label='Enter Firstname' />
@@ -170,7 +286,7 @@ const LoginDialog = ({ open, setOpen }) => {
                     }
                 </Box>
             </Component>
-        </Dialog>
+        </Dialog >
     )
 };
 

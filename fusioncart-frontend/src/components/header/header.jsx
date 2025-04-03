@@ -8,6 +8,7 @@ import { useState } from "react";
 
 const StyledHeader = styled(AppBar)`
     background: RGB(43, 99, 86);
+    
     ${'' /* height: 55px; */}
 `;
 
