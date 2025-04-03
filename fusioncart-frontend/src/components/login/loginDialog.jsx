@@ -98,7 +98,7 @@ const LoginDialog = ({ open, setOpen }) => {
     const { setAccount } = useContext(DataContext);
     const [login, setLogin] = useState(loginInitialValue);
     const [error, setError] = useState(false);
-
+    const GOOGLE_CLIENT_ID=process.env.GOOGLE_CLIENT_ID;
 
     const handleClose = () => {
         setOpen(false);
@@ -227,7 +227,7 @@ const LoginDialog = ({ open, setOpen }) => {
 
             console.log("Rendering Google sign-in button...");
             window.google.accounts.id.initialize({
-                client_id: "294014824025-50eid1q5sjo9o8fk0ncmheteja229r4m.apps.googleusercontent.com",
+                client_id: GOOGLE_CLIENT_ID,
                 callback: handleCallbackresponse,
             });
             window.google.accounts.id.renderButton(signInDiv, { size: "large", theme: "outline" });
