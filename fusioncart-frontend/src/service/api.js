@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = process.env.NODE_ENV === "development" ? "http://localhost:5000" : "https://fusion-cart-api.vercel.app";
+const URL = process.env.NODE_ENV === "development" ? "http://localhost:5000" : "https://fusion-cart-backend.vercel.app";
 
 // const URL = "http://localhost:5000";
 

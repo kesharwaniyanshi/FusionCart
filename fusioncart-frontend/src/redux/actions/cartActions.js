@@ -1,7 +1,7 @@
  import axios from "axios";
 import * as actionTypes from "../constants/cartConstant";
 
-const URL = process.env.NODE_ENV === "development" ? "http://localhost:5000" : "https://fusion-cart-api.vercel.app";
+const URL = process.env.NODE_ENV === "development" ? "http://localhost:5000" : "https://fusion-cart-backend.vercel.app";
 
 export const AddToCart = (product_id, quantity) => async (dispatch) => {
     try {
