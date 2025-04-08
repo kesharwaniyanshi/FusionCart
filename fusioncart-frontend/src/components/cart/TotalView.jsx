@@ -1,7 +1,7 @@
-import { Box, Typography, styled } from "@mui/material";
+import { Box, Typography, styled,Button } from "@mui/material";
 import { PriceContext } from "../../context/PriceProvider";
 import { useContext } from "react";
-
+import { payUsingRazorpay } from "../../service/api";
 
 const Header = styled(Box)`
     background-color: #ffffff;
@@ -20,10 +20,28 @@ const Container = styled(Box)`
 }
 `;
 
-const Price= styled(Box)`
+const Price = styled(Box)`
 float: right;
 
 `;
+const ButtonWrapper = styled(Box)`
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top:30px;
+
+`;
+
+const StyledButton = styled(Button)`
+display: flex;
+${'' /* margin-left: auto; */}
+background: #fb541b;
+border-radius: 2px;
+color: #fff;
+width: 250px;
+height: 51px;
+`
+
 
 
 
@@ -40,6 +58,41 @@ const TotalView = ({ cartItems }) => {
 
         return acc + (randomPrice - actualPrice);
     }, 0);
+
+    const RAZORPAY_KEY_ID = process.env.REACT_APP_RAZORPAY_KEY_ID; // Ensure this is set in your .env file
+
+    const handlePlaceOrder = async () => {
+        let totalAmount = totalPrice - 50; // Assuming a flat discount of ₹50 for simplicity
+        // cartItems.forEach(item => {
+        //     totalAmount += item.price * item.quantity; // adjust based on your logic
+        // });
+
+        const response = await payUsingRazorpay(totalAmount * 100);
+        
+
+        const options = {
+            key:RAZORPAY_KEY_ID, // from Razorpay dashboard
+            amount: totalAmount*100,
+            currency: "INR",
+            name: "FusionCart",
+            description: `Order for ${cartItems.length} items`,
+            order_id: response.id,
+            handler: function (res) {
+                alert("Payment Successful!");
+            },
+            prefill: {
+                name: "Test User",
+                email: "test@gmail.com",
+                contact: "9999999999"
+            },
+            theme: {
+                color: "#3399cc"
+            }
+        };
+
+        const razor = new window.Razorpay(options);
+        razor.open();
+    };
 
     return (
         <Box>
@@ -64,6 +117,9 @@ const TotalView = ({ cartItems }) => {
                 <Typography variant="h6" >
                     Total Amount <Price> ₹{totalPrice - 50}</Price>
                 </Typography>
+                <ButtonWrapper>
+                    <StyledButton onClick={handlePlaceOrder}>Place Order</StyledButton>
+                </ButtonWrapper>
             </Container>
         </Box>
     )

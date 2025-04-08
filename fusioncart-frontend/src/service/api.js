@@ -21,3 +21,20 @@ export const authenticateLogin = async (data) => {
         return error.response; // Return the error response for better debugging
     }
 }
+
+export const payUsingRazorpay = async (amount) => {
+    try {
+        const response = await fetch("http://localhost:5000/api/payment/create-order", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ amount })
+        });
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error while creating order:", error);
+    }
+};

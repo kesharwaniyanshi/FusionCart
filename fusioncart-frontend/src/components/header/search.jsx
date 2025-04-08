@@ -203,9 +203,13 @@ const Search = () => {
                         {frequentlyPurchased.map(product => (
                             <HorizontalListItem key={product.product_id}>
                                 <ProductImage src={product.image_url} alt={product.product_name} />
+                                <Link to={`product/${product.product_id}`}
+                                    style={{textAlign:"center", textDecoration: 'none', color: 'inherit' }}
+                                    onClick={() => setText('')}>
                                 <Typography variant="caption" align="center">
                                     {product.brand} {product.product_name}
                                 </Typography>
+                                </Link>
                             </HorizontalListItem>
                         ))}
                     </HorizontalListContainer>
@@ -216,9 +220,13 @@ const Search = () => {
                         {previouslyPurchased.map(product => (
                             <HorizontalListItem key={product.product_id}>
                                 <ProductImage src={product.image_url} alt={product.product_name} />
+                                <Link to={`product/${product.product_id}`} 
+                                    style={{ textAlign: "center", textDecoration: 'none', color: 'inherit' }}
+                                    onClick={() => setText('')}>
                                 <Typography variant="caption" align="center">
                                     {product.brand} {product.product_name}
                                 </Typography>
+                                </Link>
                             </HorizontalListItem>
                         ))}
                     </HorizontalListContainer>

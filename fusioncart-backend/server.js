@@ -193,6 +193,7 @@ const connectDb = require("./utils/db");
 const authRoute = require("./routers/auth-router");
 const errorMiddleware = require('./middlewares/error-middleware');
 const DefaultData = require('./default');
+const paymentRoute = require("./routers/payment-router"); // Import your payment route
 require('./config/passport-config'); // Ensure passport is configured
 
 dotenv.config();
@@ -233,6 +234,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/", authRoute);
+app.use("/api/payment", paymentRoute); // Ensure this is the correct route for your API
 
 // Error Handling Middleware
 app.use(errorMiddleware);
