@@ -182,7 +182,7 @@ const Search = () => {
         const shuffled = [...products].sort(() => 0.5 - Math.random()); // Shuffle the array
         return shuffled.slice(0, count); // Return the first 'count' items
     };
-    const frequentlyPurchased = products.slice(17, 23);
+    const frequentlyPurchased = (products || []).slice(17, 23);
     const previouslyPurchased = getRandomProducts(products, 5);
 
     return (
@@ -233,7 +233,7 @@ const Search = () => {
 
                     {/* Filtered Products */}
                     <SectionTitle>Similar Products</SectionTitle>
-                    {products.filter(product =>
+                    {(products || []).filter(product =>
                         product.product_name.toLowerCase().includes(text.toLowerCase()) ||
                         product.brand.toLowerCase().includes(text.toLowerCase()) ||
                         product.category.toLowerCase().includes(text.toLowerCase())

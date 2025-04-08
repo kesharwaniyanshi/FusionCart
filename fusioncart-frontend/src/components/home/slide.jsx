@@ -82,7 +82,7 @@ const Slide = ({ products, title, timer }) => {
             return acc;
         }, [])
          :
-         products.filter(product => {
+        (products || []).filter(product => {
             return (title === product.category)
         }
         )
