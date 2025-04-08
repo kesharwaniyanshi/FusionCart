@@ -24,7 +24,7 @@ export const authenticateLogin = async (data) => {
 
 export const payUsingRazorpay = async (amount) => {
     try {
-        const response = await fetch("http://localhost:5000/api/payment/create-order", {
+        const response = await fetch(`${URL}/api/payment/create-order`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
