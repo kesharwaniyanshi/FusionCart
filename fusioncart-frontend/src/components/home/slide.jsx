@@ -74,18 +74,17 @@ const Slide = ({ products, title, timer }) => {
 
     }
 
-    const filteredProducts = title === "Deal of the Day" ?
-        products.reduce((acc, product) => {
+    const filteredProducts = Array.isArray(products) ? (
+    title === "Deal of the Day"
+        ? products.reduce((acc, product) => {
             if (!acc.find(item => item.product_name === product.product_name)) {
                 acc.push(product);
             }
             return acc;
         }, [])
-         :
-        (products || []).filter(product => {
-            return (title === product.category)
-        }
-        )
+        : products.filter(product => title === product.category)
+) : [];
+
 
     return (
         <Component>

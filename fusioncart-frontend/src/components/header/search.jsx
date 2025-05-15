@@ -178,12 +178,15 @@ const Search = () => {
     const getText = (text) => {
         setText(text);
     };
-    const getRandomProducts = (products, count) => {
-        const shuffled = [...products].sort(() => 0.5 - Math.random()); // Shuffle the array
-        return shuffled.slice(0, count); // Return the first 'count' items
-    };
-    const frequentlyPurchased = (products || []).slice(17, 23);
-    const previouslyPurchased = getRandomProducts(products, 5);
+   const getRandomProducts = (products, count) => {
+    if (!Array.isArray(products)) return [];
+    const shuffled = [...products].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+};
+
+    const frequentlyPurchased = products.length > 0 ? products.slice(17, 23) : [];
+    const previouslyPurchased = products.length > 0 ? getRandomProducts(products, 5) : [];
+
 
     return (
         <SearchContainer>

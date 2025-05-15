@@ -28,15 +28,15 @@ const Home = () => {
             {/* <NavBar /> */}
             <Component>
                 <Banner />
-                <Slide products={products}  title="Deal of the Day" timer={true}  />
+                <Slide products={products || []}  title="Deal of the Day" timer={true}  />
                 <MidSection/>
-                <Slide products={products}  title="Clothing"  timer={false}  />
-                <Slide products={products} title="Baby Care"  timer={false} />
-                <Slide products={products} title="Electronics" timer={false} />
-                <Slide products={products} title="Household Essentials"  timer={false}/>
-                <Slide products={products} title="Fitness Equipment"  timer={false}/>
-                <Slide products={products} title="Beauty & Personal Care" timer={false} />
-                <Slide products={products} title="Garden Supplies" timer={false}  />
+                <Slide products={products || []}  title="Clothing"  timer={false}  />
+                <Slide products={products || []} title="Baby Care"  timer={false} />
+                <Slide products={products || []} title="Electronics" timer={false} />
+                <Slide products={products || []} title="Household Essentials"  timer={false}/>
+                <Slide products={products || []} title="Fitness Equipment"  timer={false}/>
+                <Slide products={products || []} title="Beauty & Personal Care" timer={false} />
+                <Slide products={products || []} title="Garden Supplies" timer={false}  />
 
             </Component>
         </>
