@@ -1,15 +1,18 @@
 const productModel =require( "../models/product-model");
 
 
- const getProducts=async(req,res)=>{
+const getProducts = async (req, res) => {
     try {
-        const products=await productModel.find({});
+        console.log("Fetching products...");
+        const products = await productModel.find({});
+        console.log("Fetched products:", products.length);
         res.status(200).json(products);
     } catch (error) {
-        res.status(500).json({message:error.message});
-        console.error(error);
+        console.error("Error in getProducts:", error);
+        res.status(500).json({ message: error.message });
     }
-}
+};
+  
 
 
 const getProductById = async (req, res) => {

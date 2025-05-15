@@ -200,11 +200,25 @@ dotenv.config();
 const app = express();
 
 // Allowed Origins
+// const allowedOrigins = ['https://fusion-cart-frontend.vercel.app', 'http://localhost:3000'];
+
+// app.use(cors({
+//     origin: allowedOrigins,
+//     methods: ["GET", "POST"],
+//     allowedHeaders: ["Content-Type", "Authorization"],
+//     credentials: true
+// }));
 const allowedOrigins = ['https://fusion-cart-frontend.vercel.app', 'http://localhost:3000'];
 
 app.use(cors({
-    origin: allowedOrigins,
-    methods: ["GET", "POST"],
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
 }));
