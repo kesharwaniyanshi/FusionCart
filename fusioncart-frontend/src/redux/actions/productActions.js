@@ -4,7 +4,6 @@ import * as actionTypes from "../constants/productConstants"
 
 const URL = process.env.NODE_ENV === "production" ? "https://fusion-cart-backend.vercel.app" : "http://localhost:5000" ;
 
-// const URL = "http://localhost:5000";
 export const getProducts=()=>async(dispatch)=>{
     try {    
        const {data}= await axios.get(`${URL}/products`);

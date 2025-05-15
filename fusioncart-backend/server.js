@@ -184,76 +184,6 @@
 // DefaultData();
 
 
-// const express = require('express');
-// const cors = require('cors');
-// const session = require('express-session');
-// const passport = require('passport');
-// const dotenv = require('dotenv');
-// const connectDb = require("./utils/db");
-// const authRoute = require("./routers/auth-router");
-// const errorMiddleware = require('./middlewares/error-middleware');
-// const DefaultData = require('./default');
-// const paymentRoute = require("./routers/payment-router"); // Import your payment route
-// require('./config/passport-config'); // Ensure passport is configured
-
-// dotenv.config();
-// const app = express();
-
-// // Allowed Origins
-// const allowedOrigins = ['https://fusion-cart-frontend.vercel.app', 'http://localhost:3000'];
-
-// app.use(cors({
-//     origin: allowedOrigins,
-//     methods: ["GET", "POST"],
-//     allowedHeaders: ["Content-Type", "Authorization"],
-//     credentials: true
-// }));
-
-// // Handle Preflight Requests Properly
-// app.options('*', cors());
-
-// // Session Middleware (Required for Google Auth)
-// app.use(session({
-//     secret: process.env.SESSION_SECRET || 'your_secret_key',
-//     resave: false,
-//     saveUninitialized: false,
-//     cookie: {
-//         secure: process.env.NODE_ENV === "production", // Use secure cookies in production
-//         httpOnly: true, // Prevent XSS attacks
-//         sameSite: 'lax' // Allows authentication to work with third-party requests
-//     }
-// }));
-
-// // Initialize Passport Middleware
-// app.use(passport.initialize());
-// app.use(passport.session());
-
-// // Middleware for Parsing Request Bodies
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-
-// // Routes
-// app.use("/", authRoute);
-// app.use("/api/payment", paymentRoute); // Ensure this is the correct route for your API
-
-// // Error Handling Middleware
-// app.use(errorMiddleware);
-
-// // Database Connection & Start Server
-// const PORT = process.env.PORT || 5000;
-// connectDb().then(() => {
-//     console.log("Database connected successfully.");
-//     app.listen(PORT, () => {
-//         console.log(`Server is running on port ${PORT}`);
-//     });
-// }).catch((error) => {
-//     console.error("Failed to connect to the database", error);
-// });
-
-// // Default Data Setup (If Needed)
-// DefaultData();
-
-
 const express = require('express');
 const cors = require('cors');
 const session = require('express-session');
@@ -263,12 +193,13 @@ const connectDb = require("./utils/db");
 const authRoute = require("./routers/auth-router");
 const errorMiddleware = require('./middlewares/error-middleware');
 const DefaultData = require('./default');
-const paymentRoute = require("./routers/payment-router");
-require('./config/passport-config');
+const paymentRoute = require("./routers/payment-router"); // Import your payment route
+require('./config/passport-config'); // Ensure passport is configured
 
 dotenv.config();
 const app = express();
 
+// Allowed Origins
 const allowedOrigins = ['https://fusion-cart-frontend.vercel.app', 'http://localhost:3000'];
 
 app.use(cors({
@@ -278,37 +209,46 @@ app.use(cors({
     credentials: true
 }));
 
+// Handle Preflight Requests Properly
 app.options('*', cors());
 
+// Session Middleware (Required for Google Auth)
 app.use(session({
     secret: process.env.SESSION_SECRET || 'your_secret_key',
     resave: false,
     saveUninitialized: false,
     cookie: {
-        secure: process.env.NODE_ENV === "production",
-        httpOnly: true,
-        sameSite: 'lax'
+        secure: process.env.NODE_ENV === "production", // Use secure cookies in production
+        httpOnly: true, // Prevent XSS attacks
+        sameSite: 'lax' // Allows authentication to work with third-party requests
     }
 }));
 
+// Initialize Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Middleware for Parsing Request Bodies
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Routes
 app.use("/", authRoute);
-app.use("/api/payment", paymentRoute);
+app.use("/api/payment", paymentRoute); // Ensure this is the correct route for your API
+
+// Error Handling Middleware
 app.use(errorMiddleware);
 
-// DB Connect
+// Database Connection & Start Server
+const PORT = process.env.PORT || 5000;
 connectDb().then(() => {
     console.log("Database connected successfully.");
-    if (process.env.NODE_ENV === 'development') {
-        DefaultData();
-    }
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
 }).catch((error) => {
     console.error("Failed to connect to the database", error);
 });
 
-// ✅ DO NOT call app.listen() on Vercel
-module.exports = app;
+// Default Data Setup (If Needed)
+DefaultData();
