@@ -29,6 +29,11 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding-top:30px;
+width: 100%;
+@media (max-width: 1200px ,min-width: 900px) {
+    padding-top: 40px;
+    width: 100%;
+}
 
 `;
 
@@ -38,25 +43,28 @@ ${'' /* margin-left: auto; */}
 background: #fb541b;
 border-radius: 2px;
 color: #fff;
-width: 250px;
+width: 100%;
 height: 51px;
+
 `
 
 
 
 
 const TotalView = ({ cartItems }) => {
+
+    // console.log(cartItems);
     const { getPriceDetails } = useContext(PriceContext);
     // const { actualPrice, randomPrice, discountPercentage } = getPriceDetails(cartItems[0]);
     const totalPrice = cartItems?.reduce((acc, item) => {
         const { actualPrice } = getPriceDetails(item);
-        return acc + actualPrice;
+        return acc + actualPrice* item.quantity;
     }, 0);
     const totalDiscount = cartItems?.reduce((acc, item) => {
         const { randomPrice } = getPriceDetails(item);
         const { actualPrice } = getPriceDetails(item);
 
-        return acc + (randomPrice - actualPrice);
+        return acc + (randomPrice - actualPrice)*item.quantity;
     }, 0);
 
     const RAZORPAY_KEY_ID = process.env.REACT_APP_RAZORPAY_KEY_ID; // Ensure this is set in your .env file
@@ -103,10 +111,10 @@ const TotalView = ({ cartItems }) => {
             </Header>
             <Container>
                 <Typography>
-                    Price ({cartItems?.length ?? 0} {cartItems?.length === 1 ? "item" : "items"}) <Price > ₹{totalPrice}</Price>
+                    Price ({cartItems?.length ?? 0} {cartItems?.length === 1 ? "item" : "items"}) <Price > ₹{(totalPrice).toFixed(2)}</Price>
                 </Typography>
                 <Typography>
-                    Discount <Price style={{ color: "#388E3C" }}> -₹{totalDiscount}</Price>
+                    Discount <Price style={{ color: "#388E3C" }}> -₹{(totalDiscount).toFixed(2)}</Price>
                 </Typography>
                 <Typography>
                     Coupons for you  <Price style={{ color: "#388E3C" }}> -₹50</Price>
@@ -115,7 +123,7 @@ const TotalView = ({ cartItems }) => {
                     Delivery Charges <Price style={{ color: "#388E3C" }}> FREE</Price>
                 </Typography>
                 <Typography variant="h6" >
-                    Total Amount <Price> ₹{totalPrice - 50}</Price>
+                    Total Amount <Price> ₹{(totalPrice - 50).toFixed(2)}</Price>
                 </Typography>
                 <ButtonWrapper>
                     <StyledButton onClick={handlePlaceOrder}>Place Order</StyledButton>

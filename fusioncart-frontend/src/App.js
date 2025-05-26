@@ -11,6 +11,8 @@ import DetailView from './components/details/DetailView';
 import Footer from './components/footer/footer';
 import Cart from './components/cart/Cart';
 import PriceProvider from './context/PriceProvider';
+import AdminLayout from './components/admin/dashboard';
+import { Error } from './components/home/error';
 function App() {
 
 
@@ -24,6 +26,8 @@ function App() {
               <Route path='/' element={<Home />} />
               <Route path='/product/:product_id' element={<DetailView />} />
               <Route path='/cart' element={<Cart />} />
+              {/* <Route path='/admin' element={<AdminLayout />} />
+              <Route path="*" element={<Error />} /> */}
             </Routes>
           </Box>
           <Footer />

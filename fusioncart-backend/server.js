@@ -10,51 +10,6 @@
 // dotenv.config();
 
 // const corsOptions = {
-//     origin: ['https://fusion-cart-frontend.vercel.app','http://localhost:3000'],
-//     methods: ["GET","POST"],
-//     credentials: true,
-// };
-// app.use(cors(corsOptions));
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-
-// app.use("/", authRoute);
-
-// app.use(errorMiddleware);
-
-// const PORT = process.env.PORT || 5000;
-
-// // if(process.env.NODE_ENV === 'production'){
-// //     app.use(express.static('fusioncart-frontend/build'));
-// // }
-
-
-// connectDb().then(() => {
-//     app.listen(PORT, () => {
-//         console.log(`Server is running on port ${PORT}`);
-//     });
-// }).catch((error) => {
-//     console.error("Failed to connect to the database", error);
-// });
-
-
-// DefaultData();
-
-
-
-
-// const express = require('express');
-// const app = express();
-// const cors = require('cors');
-// const connectDb = require("./utils/db");
-// const authRoute = require("./routers/auth-router");
-// const errorMiddleware = require('./middlewares/error-middleware');
-// const dotenv = require('dotenv');
-// const DefaultData = require('./default');
-
-// dotenv.config();
-
-// const corsOptions = {
 //     origin: ['https://fusion-cart-frontend.vercel.app', 'http://localhost:3000'],
 //     methods: ["GET", "POST"],
 //     credentials: true,
@@ -198,34 +153,6 @@ require('./config/passport-config'); // Ensure passport is configured
 
 dotenv.config();
 const app = express();
-
-// Allowed Origins
-// const allowedOrigins = ['https://fusion-cart-frontend.vercel.app', 'http://localhost:3000'];
-
-// app.use(cors({
-//     origin: allowedOrigins,
-//     methods: ["GET", "POST"],
-//     allowedHeaders: ["Content-Type", "Authorization"],
-//     credentials: true
-// }));
-// const allowedOrigins = ['https://fusion-cart-frontend.vercel.app', 'http://localhost:3000'];
-
-// app.use(cors({
-//     origin: function (origin, callback) {
-//         if (!origin || allowedOrigins.includes(origin)) {
-//             callback(null, true);
-//         } else {
-//             callback(new Error('Not allowed by CORS'));
-//         }
-//     },
-//     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-//     allowedHeaders: ["Content-Type", "Authorization"],
-//     credentials: true
-// }));
-
-// // Handle Preflight Requests Properly
-// app.options('*', cors());
-
 
 const allowedOrigins = ['https://fusion-cart-frontend.vercel.app', 'http://localhost:3000'];
 

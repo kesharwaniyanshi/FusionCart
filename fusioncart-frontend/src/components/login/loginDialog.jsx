@@ -98,7 +98,7 @@ const LoginDialog = ({ open, setOpen }) => {
     const { setAccount } = useContext(DataContext);
     const [login, setLogin] = useState(loginInitialValue);
     const [error, setError] = useState(false);
-    const GOOGLE_CLIENT_ID=process.env.GOOGLE_CLIENT_ID;
+    const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 
     const handleClose = () => {
         setOpen(false);
@@ -268,7 +268,9 @@ const LoginDialog = ({ open, setOpen }) => {
                             <Typography style={{ textAlign: "center" }}>OR</Typography>
                             <RequestOTP>Request OTP</RequestOTP>
                             <CreateAccount onClick={() => toggleSignUp()}>New to FusionCart? Create an account</CreateAccount>
-                    <div div id="signInDiv" style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}></div>
+                            <div id="signInDiv"
+                                style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
+                            </div>
 
 
                             {/* <div div id="signInDiv" style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}></div> */}

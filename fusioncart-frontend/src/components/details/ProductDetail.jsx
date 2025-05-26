@@ -1,7 +1,7 @@
 import { Box, styled, Typography, Grid, Table, TableBody, TableRow, TableCell, TableHead, TableFooter } from "@mui/material";
 import { PriceContext } from "../../context/PriceProvider";
 import { useContext } from "react";
-import LocalOfferIcon from '@mui/icons-material/LocalOffer'; <LocalOfferIcon />
+import LocalOfferIcon from '@mui/icons-material/LocalOffer'; 
 
 const SmallText = styled(Box)`
 font-size:14px;

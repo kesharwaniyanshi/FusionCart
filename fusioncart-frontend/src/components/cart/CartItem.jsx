@@ -49,7 +49,7 @@ const CartItem = ({ item }) => {
         <Component>
             <LeftComponent>
                 <Image src={item.image_url} alt="product" />
-                <GroupedButton />
+                <GroupedButton item={item} />
             </LeftComponent>
             <Box style={{ margin: "20px" }}>
                 <Link to={`/product/${item.product_id}`} style={{ textDecoration: "none", color: "inherit" }}>

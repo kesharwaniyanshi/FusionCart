@@ -15,3 +15,7 @@ export const AddToCart = (product_id, quantity) => async (dispatch) => {
 export const RemoveFromCart = (product_id) => (dispatch) => {
     dispatch({ type: actionTypes.REMOVE_FROM_CART, payload: product_id });
 };
+
+export const UpdateItemQuantity = (product_id, quantity) => async(dispatch) => {
+    dispatch({ type: actionTypes.UPDATE_ITEM_QUANTITY, payload: { product_id, quantity } });
+};
